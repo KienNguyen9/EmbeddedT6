@@ -16,7 +16,8 @@ Ví dụ:
 Dùng GCC bằng lệnh sau để có file tiền xử lí: gcc -E main.o -o main.i (chuyển từ file .c sang file .i)
 
 
-# 2. Compiling (Biên dịch
+# 2. Compiling (Biên dịch)
+
 # 3. Assembling (Hợp ngữ)
 # 4. Linking (Liên kết)
 
