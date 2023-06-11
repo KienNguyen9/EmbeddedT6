@@ -14,10 +14,13 @@ Ví dụ:
 
 Dùng GCC bằng lệnh sau để có file tiền xử lí: gcc -E main.o -o main.i (chuyển từ file .c sang file .i)
 
-<
->
 # 2. Compiling (Biên dịch)
-
+Chuyển chúng sang dạng mã Assembly là một ngôn ngữ bậc thấp (hợp ngữ) gần với tập lệnh của bộ vi xử lý.
 # 3. Assembling (Hợp ngữ)
+Dich chương trình => Sang mã máy 0 và 1
+Một tệp mã máy (.obj) sinh ra trong hệ thống sau đó
 # 4. Linking (Liên kết)
+Trong giai đoạn này mã máy của một chương trình dịch từ nhiều nguồn (file .c hoặc file thư viện .lib) được liên kết lại với nhau để tạo thành chương trình đích duy nhất Mã máy của các hàm thư viện gọi trong chương trình cũng được đưa vào chương trình cuối trong giai đoạn này. Chính vì vậy mà các lỗi liên quan đến việc gọi hàm hay sử dụng biến tổng thể mà không tồn tại sẽ bị phát hiện. Kể cả lỗi viết chương trình chính không có hàm main() cũng được phát hiện trong liên kết.
+
+
 
