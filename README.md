@@ -7,8 +7,8 @@ Quá trình biên dịch
 ![image](https://github.com/KienNguyen9/EmbeddedT6/assets/136218538/562d9e22-66ef-4010-8893-c074d149f7e2)
 ![image](https://github.com/KienNguyen9/EmbeddedT6/assets/136218538/010b0838-7917-4e5b-8f1a-b11012bfc3d7)
 
-1. Pre-processing (Tiền xử lí)
-2. Compiling (Biên dịch)
-3. Assembling (Hợp ngữ)
-4. Linking (Liên kết)
+**1. Pre-processing (Tiền xử lí)
+**2. Compiling (Biên dịch)
+**3. Assembling (Hợp ngữ)
+**4. Linking (Liên kết)
 
