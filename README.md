@@ -8,7 +8,14 @@ Quá trình biên dịch
 ![image](https://github.com/KienNguyen9/EmbeddedT6/assets/136218538/010b0838-7917-4e5b-8f1a-b11012bfc3d7)
 
 1. Pre-processing (Tiền xử lí)
-2. Compiling (Biên dịch)
+Bộ tiền xử lý C không phải là một phần của trình biên dịch, mà là một bước riêng biệt trong quá trình biên dịch. Nói một cách đơn giản, Bộ tiền xử lý C chỉ là một công cụ thay thế văn bản và nó hướng dẫn trình biên dịch thực hiện tiền xử lý cần thiết trước khi biên dịch thực tế. Các lệnh tiền xử lí bắt đầu bằng kí tự "#" 
+Ví dụ: 
+- " #define" :Thay thế các macro
+- "#include" :Chèn thêm file khác như các thư viên
+Dùng GCC bằng lệnh sau để có file tiền xử lí: gcc -E main.o -o main.i (chuyển từ file .c sang file .i)
+
+
+2. Compiling (Biên dịch
 3. Assembling (Hợp ngữ)
 4. Linking (Liên kết)
 
