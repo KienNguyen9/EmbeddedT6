@@ -16,6 +16,7 @@ Dùng GCC bằng lệnh sau để có file tiền xử lí: gcc -E main.o -o mai
 
 # 2. Compiling (Biên dịch)
 Chuyển chúng sang dạng mã Assembly là một ngôn ngữ bậc thấp (hợp ngữ) gần với tập lệnh của bộ vi xử lý.
+Dùng GCC bằng lệnh sau để chuyển từ file .i sang file .s: gcc main.i -S -o main.s
 # 3. Assembling (Hợp ngữ)
 Dich chương trình => Sang mã máy 0 và 1
 Một tệp mã máy (.obj) sinh ra trong hệ thống sau đó
