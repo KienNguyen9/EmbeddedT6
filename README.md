@@ -12,6 +12,7 @@ Bộ tiền xử lý C không phải là một phần của trình biên dịch,
 Ví dụ: 
 - " #define" :Thay thế các macro
 - "#include" :Chèn thêm file khác như các thư viên
+
 Dùng GCC bằng lệnh sau để có file tiền xử lí: gcc -E main.o -o main.i (chuyển từ file .c sang file .i)
 
 
