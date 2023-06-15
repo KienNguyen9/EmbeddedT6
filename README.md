@@ -24,9 +24,13 @@ Một tệp mã máy (.obj) sinh ra trong hệ thống sau đó
 Trong giai đoạn này mã máy của một chương trình dịch từ nhiều nguồn (file .c hoặc file thư viện .lib) được liên kết lại với nhau để tạo thành chương trình đích duy nhất Mã máy của các hàm thư viện gọi trong chương trình cũng được đưa vào chương trình cuối trong giai đoạn này. Chính vì vậy mà các lỗi liên quan đến việc gọi hàm hay sử dụng biến tổng thể mà không tồn tại sẽ bị phát hiện. Kể cả lỗi viết chương trình chính không có hàm main() cũng được phát hiện trong liên kết.
 
 # BUỔI 5: POINTER - CON TRỎ
-Con trỏ là một biến địa chỉ (biến này lưu địa chỉ ở vị trí con trỏ trỏ đến)
-Con trỏ cũng có một địa chỉ riêng ( địa chỉ rác ), có thể trùng với địa chỉ của 1 biến nào đó trong chương trình . 
-Nên khi chưa dùng dến con trỏ nên khai con trỏ = NULL, để ô địa chỉ của con trỏ sẽ là 0. *cú pháp: int *ptr =NULL;
+POINTER: Là một biến đặc biệt, dùng để lưu địa chỉ của biến chứ không phải giá trị, được lưu trên ram. Kích thước của biến pointer phụ thuộc vào vi xử lý.
 
+NORMAL POINTER: Là con trỏ dùng để lưu địa chỉ của biến đó, kiểu dữ liệu của con biến như thế nào thì kiểu con trỏ cũng vậy.
 
+Ví dụ:
 
+int a = 10 // giả sử có địa chỉ là 0x01
+int *ptr = &a = 0x01 // * ptr ở đây là biến con trỏ ptr, do quy tắc đặt tên biến pointer phải có dấu * ở trước.
+printf("Dia chi: %p,ptr); // Dia chi 0x01.
+printf("Gia tri: %d, *ptr);// * ptr là giá trị của con trỏ ptr trỏ đến.
