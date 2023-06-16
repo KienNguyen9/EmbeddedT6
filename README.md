@@ -39,6 +39,7 @@ printf("Gia tri: %d, *ptr);// * ptr là giá trị của con trỏ ptr trỏ đ�
 # Void Pointer
 Con trỏ void có thể trỏ đến các vùng nhớ có các kiểu dữ liệu khác nhau.
 Con trỏ void không xác định được kiểu dữ liệu của vùng nhớ mà nó trỏ tới, vì vậy không thể truy cập xuất trực tiếp nội dung thông qua toán tử derefernce () được. Mà con trỏ kiểu void cần phải được ép kiểu một cách rõ ràng sang con trỏ có kiểu dữ liệu khác trước khi sử dụng toán tử derefernce ().
+```
 #include <stdio.h>
 
 void tong(int a,int b){
@@ -68,3 +69,4 @@ int main()
    ((void (*)(int, int))ptr)(9,1);
    return 0;
 }
+```
