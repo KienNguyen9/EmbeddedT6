@@ -26,7 +26,8 @@ Trong giai đoạn này mã máy của một chương trình dịch từ nhiều
 # BUỔI 5: POINTER - CON TRỎ
 POINTER: Là một biến đặc biệt, dùng để lưu địa chỉ của biến chứ không phải giá trị, được lưu trên ram. Kích thước của biến pointer phụ thuộc vào vi xử lý.
 
-NORMAL POINTER: Là con trỏ dùng để lưu địa chỉ của biến đó, kiểu dữ liệu của con biến như thế nào thì kiểu con trỏ cũng vậy.
+# Normal pointer 
+Là con trỏ dùng để lưu địa chỉ của biến đó, kiểu dữ liệu của con biến như thế nào thì kiểu con trỏ cũng vậy.
 
 Ví dụ:
 
@@ -34,3 +35,36 @@ int a = 10 // giả sử có địa chỉ là 0x01
 int *ptr = &a = 0x01 // * ptr ở đây là biến con trỏ ptr, do quy tắc đặt tên biến pointer phải có dấu * ở trước.
 printf("Dia chi: %p,ptr); // Dia chi 0x01.
 printf("Gia tri: %d, *ptr);// * ptr là giá trị của con trỏ ptr trỏ đến.
+
+# Void Pointer
+Con trỏ void có thể trỏ đến các vùng nhớ có các kiểu dữ liệu khác nhau.
+Con trỏ void không xác định được kiểu dữ liệu của vùng nhớ mà nó trỏ tới, vì vậy không thể truy cập xuất trực tiếp nội dung thông qua toán tử derefernce () được. Mà con trỏ kiểu void cần phải được ép kiểu một cách rõ ràng sang con trỏ có kiểu dữ liệu khác trước khi sử dụng toán tử derefernce ().
+#include <stdio.h>
+
+void tong(int a,int b){
+   printf("tong %d va %d = %d\n", a, b, a + b);
+}
+
+int main()
+{
+
+   int i = 3;
+   double d =12.4;
+   char c ='B';
+
+   // con trỏ void có thể trỏ đến bất kỳ địa chỉ nào 
+   void *ptr = &i;
+
+   // để lấy giá trị từ con trỏ void ta cần ép kiểu nó
+   printf("i = %d\n",*(int *)ptr);
+
+   ptr = &d;
+   printf("d = %f\n",*(double *)ptr);
+
+   ptr = &c;
+   printf("c = %c\n",*(char *)ptr);
+
+   ptr = &tong;
+   ((void (*)(int, int))ptr)(9,1);
+   return 0;
+}
