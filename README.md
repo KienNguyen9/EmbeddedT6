@@ -70,3 +70,12 @@ int main()
    return 0;
 }
 ```
+# Null Pointer
+Con trỏ null là con trỏ có giá trị và địa chỉ bằng 0.
+Khi khai báo 1 con trỏ:
+Phải khai báo địa chỉ cho nó.
+Nếu mà chưa sử dụng thì gán cho nó con trỏ null.
+Hoặc khi khai báo con trỏ và đã sử dụng nó rồi, khi không muốn sử dụng nó nữa thì phải gán nó lại là con trỏ null.
+```
+    int *ptr = NULL;
+```
