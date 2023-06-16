@@ -79,3 +79,6 @@ Hoặc khi khai báo con trỏ và đã sử dụng nó rồi, khi không muốn
 ```
     int *ptr = NULL;
 ```
+
+^^^ abc
+^^^
