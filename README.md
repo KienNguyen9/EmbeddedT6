@@ -129,4 +129,5 @@ Vùng nhớ Stack được quản lý bởi hệ điều hành, dữ liệu đư
         ```
         int *A = (int *)malloc(18446744073709551615);
         ```
+
 </details>
