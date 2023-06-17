@@ -28,7 +28,7 @@ Trong giai đoạn này mã máy của một chương trình dịch từ nhiều
 
 
 <details>
-<summary>BUỔI 5: POINTER - CON TRỎH</summary>      
+<summary>BUỔI 5: POINTER - CON TRỎ</summary>      
 POINTER: Là một biến đặc biệt, dùng để lưu địa chỉ của biến chứ không phải giá trị, được lưu trên ram. Kích thước của biến pointer phụ thuộc vào vi xử lý.
 
 # Normal pointer 
