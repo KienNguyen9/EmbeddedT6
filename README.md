@@ -137,3 +137,7 @@ Vùng nhớ Stack được quản lý bởi hệ điều hành, dữ liệu đư
         ```
 
 </details>
+
+<details> 
+<sumary>BUỔI 6: BIẾN VARIABLE</sumary>
+</details>
