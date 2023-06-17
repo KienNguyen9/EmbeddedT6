@@ -87,7 +87,7 @@ Hoặc khi khai báo con trỏ và đã sử dụng nó rồi, khi không muốn
 </details>
 
 <details>
-<summary>BUỔI 5: PHÂN VÙNG NHỚ</summary>
+<summary>BUỔI 6: PHÂN VÙNG NHỚ</summary>
 
 ![Phân vùng nhớ](https://raw.githubusercontent.com/nvtquyen/EmbeddedT6/main/Picture/phan%20vung%20nho.png)
 
@@ -138,4 +138,7 @@ Vùng nhớ Stack được quản lý bởi hệ điều hành, dữ liệu đư
 
 </details>
 
+<details>
+<summary>BUỔI 7: BIẾN - VARIABLE </summary>
 
+</details>
