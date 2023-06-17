@@ -87,7 +87,7 @@ Hoặc khi khai báo con trỏ và đã sử dụng nó rồi, khi không muốn
 </details>
 
 <details>
-<summary>Phân vùng nhớ</summary>
+<summary>BUỔI 5: PHÂN VÙNG NHỚ</summary>
 
 ![Phân vùng nhớ](https://raw.githubusercontent.com/nvtquyen/EmbeddedT6/main/Picture/phan%20vung%20nho.png)
 
