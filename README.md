@@ -1,6 +1,7 @@
 # EmbeddedT6
 Learn Embedded 6/2023
-# BUỔI 4: COMPILER - TRÌNH BIÊN DỊCH
+ <details>
+<summary>BUỔI 4: COMPILER - TRÌNH BIÊN DỊCH</summary>      
 Compiler hay còn gọi là trình biên dịch có thể được hiểu là công việc dịch chuỗi câu lệnh được viết từ một ngôn ngữ lập trình thành chương trình tương đương dưới dạng ngôn ngữ máy tính, thường là ngôn ngữ ở cấp thấp hơn, ngôn ngữ máy. Đơn giản dễ hiểu thì có thể tạm nói là nhờ Complier này mà file .c chúng ta viết mới được dịch thành file .hex .bin để nạp được xuống một MCU bất kỳ.
 Quá trình biên dịch 
 ![image](https://github.com/KienNguyen9/EmbeddedT6/assets/136218538/0268c4fb-9806-424c-a8ac-3ae0afdc69db)
@@ -22,6 +23,9 @@ Dich chương trình => Sang mã máy 0 và 1
 Một tệp mã máy (.obj) sinh ra trong hệ thống sau đó
 # 4. Linking (Liên kết)
 Trong giai đoạn này mã máy của một chương trình dịch từ nhiều nguồn (file .c hoặc file thư viện .lib) được liên kết lại với nhau để tạo thành chương trình đích duy nhất Mã máy của các hàm thư viện gọi trong chương trình cũng được đưa vào chương trình cuối trong giai đoạn này. Chính vì vậy mà các lỗi liên quan đến việc gọi hàm hay sử dụng biến tổng thể mà không tồn tại sẽ bị phát hiện. Kể cả lỗi viết chương trình chính không có hàm main() cũng được phát hiện trong liên kết.
+</details>
+
+
 
 # BUỔI 5: POINTER - CON TRỎ
 POINTER: Là một biến đặc biệt, dùng để lưu địa chỉ của biến chứ không phải giá trị, được lưu trên ram. Kích thước của biến pointer phụ thuộc vào vi xử lý.
