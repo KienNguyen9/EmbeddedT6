@@ -143,14 +143,14 @@ Vùng nhớ Stack được quản lý bởi hệ điều hành, dữ liệu đư
 Static Variable - biến tĩnh
 Là biến được tạo ra duy nhất một lần khi gọi hàm lần đầu tiên và nó sẽ tiếp tục tồn tại trong suốt vòng đời của chương trình.
 Ví dụ:
-      ```
-      void Count()
-      {
-      static int temp = 0;
-      printf("Temp = %d",temp);
-      temp++
-      }
-      ```
+        ```
+        void Count()
+        {
+        static int temp = 0;
+        printf("Temp = %d",temp);
+        temp++
+        }
+        ```
 
      
       
