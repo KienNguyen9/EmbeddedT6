@@ -140,7 +140,7 @@ Vùng nhớ Stack được quản lý bởi hệ điều hành, dữ liệu đư
 
 <details>
 <summary>BUỔI 7: VARIABLE - BIẾN </summary>
-# 1. Static Variable - biến tĩnh
+1. Static Variable - biến tĩnh
 Là biến được tạo ra duy nhất một lần khi gọi hàm lần đầu tiên và nó sẽ tiếp tục tồn tại trong suốt vòng đời của chương trình.
   Ví dụ:
 ```
