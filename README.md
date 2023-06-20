@@ -144,14 +144,14 @@ Static Variable - Extern Variable
 Là biến CHỈ ĐƯỢC KHỞI TẠO 1 LẦN DUY NHẤT khi gọi hàm lần đầu tiên (Nếu được khởi tại lại nó sẽ bỏ qua dòng lệnh đó) và nó sẽ tiếp tục tồn tại trong suốt vòng đời của chương trình.
 Ví dụ: Biến static cục bộ
   
-        ```
+        
         void Count()
         {
         static int temp = 0;
         printf("Temp = %d",temp);
         temp++
         }
-        ```
+        
 Ví dụ: biến toàn cục
         ```
         void display(){
