@@ -141,7 +141,7 @@ Vùng nhớ Stack được quản lý bởi hệ điều hành, dữ liệu đư
 <details>
 <summary>BUỔI 7: VARIABLE - BIẾN </summary>
 
-# static Variable - Extern Variable
+# Static Variable - Extern Variable
 Là biến CHỈ ĐƯỢC KHỞI TẠO 1 LẦN DUY NHẤT khi gọi hàm lần đầu tiên (Nếu được khởi tại lại nó sẽ bỏ qua dòng lệnh đó) và nó sẽ tiếp tục tồn tại trong suốt vòng đời của chương trình.
 Ví dụ: Biến static cục bộ
   
@@ -173,7 +173,7 @@ File main.c như sau:
 # Từ khóa volatile
 Trong lập trình nhúng rất thường hay gặp khai báo biến với từ khóa volatile. Việc khai báo biến volatile là rất cần thiết để tránh những lỗi sai khó phát hiện do tính năng optimization của compiler.
 Volatile có nhiệm vụ báo cho Compiler không được tối ưu biến đó. Ví dụ:
-        volatile int x = readADC();
 
+        volatile int x = readADC();
 
 </details>
