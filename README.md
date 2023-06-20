@@ -153,18 +153,16 @@ Ví dụ: Biến static cục bộ
         }
         
 Ví dụ: biến toàn cục
-        ```
+File test.c có hàm sau: 
         void display(){
           printf('TEST')
         }
-        ```
-
-        ```
+File main.c như sau        
         extern display();
         
         int main(){
           display();
           return 0;
         }
-        ```
+        
 </details>
