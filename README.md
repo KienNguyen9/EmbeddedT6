@@ -160,6 +160,7 @@ File test.c có hàm sau:
         }
         ```
 File main.c như sau:
+
         ```
         extern display();
         
