@@ -140,9 +140,9 @@ Vùng nhớ Stack được quản lý bởi hệ điều hành, dữ liệu đư
 
 <details>
 <summary>BUỔI 7: VARIABLE - BIẾN </summary>
-Static Variable - biến tĩnh
-Là biến được tạo ra duy nhất một lần khi gọi hàm lần đầu tiên và nó sẽ tiếp tục tồn tại trong suốt vòng đời của chương trình.
-Ví dụ:
+Static Variable - Extern Variable
+Là biến CHỈ ĐƯỢC KHỞI TẠO 1 LẦN DUY NHẤT khi gọi hàm lần đầu tiên (Nếu được khởi tại lại nó sẽ bỏ qua dòng lệnh đó) và nó sẽ tiếp tục tồn tại trong suốt vòng đời của chương trình.
+Ví dụ: Biến static cục bộ
   
         ```
         void Count()
@@ -152,5 +152,19 @@ Ví dụ:
         temp++
         }
         ```
+Ví dụ: biến toàn cục
+        ```
+        void display(){
+          printf('TEST')
+        }
+        ```
 
+        ```
+        extern display();
+        
+        int main(){
+          display();
+          return 0;
+        }
+        ```
 </details>
