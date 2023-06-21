@@ -3,7 +3,7 @@ Learn Embedded 6/2023
 <details>
 <summary>BUỔI 1: GIỚI THIỆU </summary>
     
-<detail/>
+</detail>
     
 <details>
 <summary>BUỔI 2: MACRO & FUNCTION </summary>
