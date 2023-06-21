@@ -1,5 +1,41 @@
 # EmbeddedT6
 Learn Embedded 6/2023
+<summary>BUỔI 2: MACRO & FUNCTION </summary>
+
+Macro  | Function
+------------- | -------------
+Macro là một thủ tục tiền xử lý  | Function là một thủ tục thực thi tại runtime
+Được định nghĩa bằng cách sử dụng tiền xử lý (#define)  | Được định nghĩa bằng cách sử dụng cú pháp function
+Được sử dụng để thay thế một đoạn mã nào đó trong mã nguồn bằng một giá trị cụ thể  | Được sử dụng để thực thi một tác vụ cụ thể và trả về một giá trị
+Được thực hiện trong quá trình biên dịch, trước khi chương trình được thực thi  | Được thực thi trong quá trình chạy chương trình
+Không có tham số kiểu dữ liệu  | Có thể có các tham số kiểu dữ liệu khác nhau
+Vì biên dịch trước trong mã nguồn nên *Macro* tối ưu về tốc độ nhưng "có thể" làm tăng kích thước chương trình | Vì được lưu cố định trong 1 vùng nhớ nên *Function* tối ưu về kích thước chương trình nếu được gọi nhiều lần nhưng "có thể" không tối ưu tốc độ xử lý
+
+Ví dụ: Tính tổng 2 số
+Macro: 
+```
+#define SUM(x, y) ((x) + (y))
+```
+Function:
+```
+int sum(int x, int y) {
+    return x + y;
+}
+```
+Cả hai cách trên đều có thể được sử dụng để tính tổng của hai số, tuy nhiên, sử dụng function sẽ cho phép bạn định nghĩa các loại tham số và kiểu dữ liệu khác nhau và trả về một giá trị kiểu dữ liệu cụ thể.
+</details>
+<details>
+<summary>BUỔI 3: STRUCT UNION </summary>
+
+- Struct và Union là 2 cấu trúc dữ liệu do lập trình viên định nghĩa bao gồm các biến với kiểu dữ liệu khác nhau. <br/>
+- Việc định nghĩa, khai báo biến, truy cập đến các thành phần của struct và union là giống nhau. Tuy nhiên, giữa struct và union có một vài điểm khác nhau:
+
+Struct  | Union
+------------- | -------------
+Size của struct ít nhất bằng tổng size của các thành phần của struct. Sử dụng từ “ít nhất” là vì size struct còn phụ thuộc vào alignment struct. sizeof(A) = 16 (vì sizeof của uint64_t, uint32_t, uint8_t lần lượt là 8, 4, 1 byte nên 1 + 4 là 5 byte nên phải chèn thêm 3 byte bộ nhớ đệm và cho ra lần quét tiếp là 8 byte) ``` struct { uint8_t var1; uint32_t var2; uint64_t var3; } ``` | Size của union bằng size của thành phần có size lớn nhất trong union. sizeof(A) = 8 (kích thước của thành phần lớn nhất trong union là uint64_t là 8 byte) ``` union { uint8_t var1; uint32_t var2; uint64_t var3; } ```
+Tại cùng 1 thời điểm run-time, có thể truy cập vào tất cả các thành phần của struct | Tại cùng 1 thời điểm run-time, chỉ có thể truy cập 1 thành phần của union
+</details>
+
 <details>
 <summary>BUỔI 4: COMPILER - TRÌNH BIÊN DỊCH</summary>      
   
@@ -181,14 +217,4 @@ Ví dụ:
 </details>
 
 
-<details>
-<summary>Struct Union</summary>
 
-- Struct và Union là 2 cấu trúc dữ liệu do lập trình viên định nghĩa bao gồm các biến với kiểu dữ liệu khác nhau. <br/>
-- Việc định nghĩa, khai báo biến, truy cập đến các thành phần của struct và union là giống nhau. Tuy nhiên, giữa struct và union có một vài điểm khác nhau:
-
-Struct  | Union
-------------- | -------------
-Size của struct ít nhất bằng tổng size của các thành phần của struct. Sử dụng từ “ít nhất” là vì size struct còn phụ thuộc vào alignment struct. sizeof(A) = 16 (vì sizeof của uint64_t, uint32_t, uint8_t lần lượt là 8, 4, 1 byte nên 1 + 4 là 5 byte nên phải chèn thêm 3 byte bộ nhớ đệm và cho ra lần quét tiếp là 8 byte) ``` struct { uint8_t var1; uint32_t var2; uint64_t var3; } ``` | Size của union bằng size của thành phần có size lớn nhất trong union. sizeof(A) = 8 (kích thước của thành phần lớn nhất trong union là uint64_t là 8 byte) ``` union { uint8_t var1; uint32_t var2; uint64_t var3; } ```
-Tại cùng 1 thời điểm run-time, có thể truy cập vào tất cả các thành phần của struct | Tại cùng 1 thời điểm run-time, chỉ có thể truy cập 1 thành phần của union
-</details>
