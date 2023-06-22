@@ -132,7 +132,7 @@ Hoặc khi khai báo con trỏ và đã sử dụng nó rồi, khi không muốn
 <summary>BUỔI 6: PHÂN VÙNG NHỚ</summary>
 
 ![Phân vùng nhớ](https://raw.githubusercontent.com/nvtquyen/EmbeddedT6/main/Picture/phan%20vung%20nho.png)
-
+ 
 • Text : <br/>
 – Quyền truy cập chỉ Read và nó chưa lệnh để thực thi nên tránh sửa đổi instruction. <br/>
 – Chứa khai báo hằng số trong chương trình (.rodata) <br/>
