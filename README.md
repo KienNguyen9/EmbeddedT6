@@ -204,14 +204,14 @@ File test.c có hàm sau:
         ```
 File main.c như sau:
 
-        ```
+        
         extern display();
         
         int main(){
           display();
           return 0;
         }
-        ```
+        
 # Từ khóa volatile
 Trong lập trình nhúng rất thường hay gặp khai báo biến với từ khóa volatile. Việc khai báo biến volatile là rất cần thiết để tránh những lỗi sai khó phát hiện do tính năng optimization của compiler.
 - Volatile có nhiệm vụ báo cho Compiler không được tối ưu biến đó.
