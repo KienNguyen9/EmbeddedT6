@@ -8,9 +8,11 @@ Learn Embedded 6/2023
 <details>
 <summary>BUỔI 2: MACRO & FUNCTION </summary>
 Được thực hiện ở quá trình tiền xử lí
+    
 Ta có thể hiểu đơn giản: 
-    MACRO là định Nghĩa 
-    FUNTION là Hàm
+
+    - MACRO là định Nghĩa 
+    - FUNTION là Hàm
 
 Macro  | Function
 ------------- | -------------
