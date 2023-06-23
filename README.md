@@ -11,8 +11,8 @@ Learn Embedded 6/2023
     
 Ta có thể hiểu đơn giản: 
 
-    - MACRO là định Nghĩa 
-    - FUNTION là Hàm
+- MACRO là định nghĩa để dễ dàng gọi và sử dụng
+- FUNTION là Hàm dùng để làm một chức năng nào đó cụ thể
 
 Macro  | Function
 ------------- | -------------
