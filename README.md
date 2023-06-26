@@ -45,7 +45,7 @@ Cả hai cách trên đều có thể được sử dụng để tính tổng c�
 <summary>BUỔI 3: STRUCT UNION  </summary> 
 
 - Struct và Union là 2 cấu trúc dữ liệu do lập trình viên định nghĩa bao gồm các biến với kiểu dữ liệu khác nhau. <br/>
-- Việc định nghĩa, khai báo biến, truy cập đến các thành phần của struct và union là giống nhau. Tuy nhiên, giữa struct và union có một vài điểm khác nhau:
+- Việc định nghĩa, khai báo biến, truy cập đến các thành phần của struct và union là giống nhau. Tuy nhiên, giữa struct và union có một vài điểm khác nhau sau:
 
 Struct  | Union
 ------------- | -------------
