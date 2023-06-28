@@ -7,7 +7,6 @@ Một chương trình gồm có:
 - Thư viện
 - Các câu lệnh
 - Hàm & macro
-- 
     
 </details>
     
