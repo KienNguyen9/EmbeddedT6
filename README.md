@@ -232,6 +232,16 @@ Ví dụ:
         volatile int x = readADC();
 
 </details>
-.
 
+<details>
+<summary>BUỔI 8: Bài tâp </summary>
+
+    
+</details>
+
+<details>
+<summary>BUỔI 9: Bài tâp </summary>
+
+    
+</details>
 
