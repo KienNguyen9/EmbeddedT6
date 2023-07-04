@@ -5,7 +5,7 @@ Learn Embedded 6/2023
 Một chương trình gồm có:
     
 - Thư viện
-- Các câu lệnh
+- Các câu lệnh 
 - Hàm & macro
     
 </details>
@@ -16,8 +16,8 @@ Một chương trình gồm có:
     
 Ta có thể hiểu đơn giản: 
 
-- MACRO là định nghĩa để dễ dàng gọi và sử dụng
-- FUNTION là Hàm dùng để làm một chức năng nào đó cụ thể
+- MACRO là định nghĩa để dễ dàng gọi và sử dụng.
+- FUNTION là Hàm dùng để làm một chức năng nào đó cụ thể.
 
 Macro  | Function
 ------------- | -------------
