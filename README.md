@@ -226,7 +226,7 @@ File main.c như sau:
 # Từ khóa volatile
 Trong lập trình nhúng rất thường hay gặp khai báo biến với từ khóa volatile. Việc khai báo biến volatile là rất cần thiết để tránh những lỗi sai khó phát hiện do tính năng optimization của compiler.
 - Volatile có nhiệm vụ báo cho Compiler không được tối ưu biến đó.
-- Biến này dùng cho các biến mà giá trị của nó có thể thay đổi hoặc có nhiều task RTOS dùng chung 1 biến
+- Biến này dùng cho các biến mà giá trị của nó có thể thay đổi hoặc có nhiều task RTOS dùng chung 1 biến.
 Ví dụ:
 
         volatile int x = readADC();
