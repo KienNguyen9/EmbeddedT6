@@ -14,4 +14,4 @@ int main(int argc, char const *argv[])
     printf("MAX: %d\n", MAX);
     test();
     return 0;
-} 
+}
