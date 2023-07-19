@@ -1,4 +1,10 @@
-#include <stdio.h>
+/*
+* File: main.c
+* Author: Kien Nguyen
+* Date: 19/06/2023
+* Description: This is a sample file for pointer
+*/
+#include <stdio.h> // Standard Input/Output Library
 
 void tong(int a, int b){
 	printf("tong cua %d va %d la: %d\n", a,b,a+b);
@@ -21,6 +27,5 @@ int main(){
 	void (*pheptoan)(int a, int b) = NULL;
 	pheptoan = &thuong;
 	pheptoan(7,9);
-	
 	return 0;
 }
