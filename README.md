@@ -1,7 +1,8 @@
     # EmbeddedT6
 Learn Embedded 6/2023
 <details>
-  <summary><h2>:electron: C programming language</h2></summary>
+  <summary><h2>![image](https://github.com/KienNguyen9/EmbeddedT6/assets/136218538/c514e94b-7b73-44c3-a10f-5bed00cb4ad7)
+ C programming language</h2></summary>
 <details> 
 <summary>BUỔI 1: GIỚI THIỆU </summary>
 Một chương trình gồm có:
