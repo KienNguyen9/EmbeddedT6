@@ -28,7 +28,7 @@ Macro là một thủ tục tiền xử lý  | Function là một thủ tục th
 Không có tham số kiểu dữ liệu  | Có thể có các tham số kiểu dữ liệu khác nhau
 Vì biên dịch trước trong mã nguồn nên *Macro* tối ưu về tốc độ nhưng "có thể" làm tăng kích thước chương trình | Vì được lưu cố định trong 1 vùng nhớ nên *Function* tối ưu về kích thước chương trình nếu được gọi nhiều lần nhưng "có thể" không tối ưu tốc độ xử lý
 
-Ví dụ: Tính tổng 2 số
+Ví dụ: Tính tổng  2 số
 Macro: 
 ```
 #define SUM(x, y) ((x) + (y))
