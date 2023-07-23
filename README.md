@@ -1,8 +1,8 @@
     # EmbeddedT6
 Learn Embedded 6/2023
-* [![Next][Next.js]][Next-url] 
+
 <details>
-  <summary><h2> C programming language</h2></summary>
+  <summary><h2> ©️ C programming language</h2></summary>
 <details> 
 <summary>BUỔI 1: GIỚI THIỆU </summary>
 Một chương trình gồm có:
