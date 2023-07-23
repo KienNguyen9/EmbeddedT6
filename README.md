@@ -5,7 +5,7 @@ Learn Embedded 6/2023
   <summary><h2> ©️ C programming language</h2></summary>
 <details> 
     
-<summary><h3>BUỔI 1: GIỚI THIỆU</h3> </summary>
+<summary>BUỔI 1: GIỚI THIỆU </summary>
 Một chương trình gồm có:
     
 - Thư viện
@@ -15,7 +15,7 @@ Một chương trình gồm có:
 </details>
     
 <details>
-<summary><h3>BUỔI 2: MACRO & FUNCTION </h3></summary>
+<summary>BUỔI 2: MACRO & FUNCTION</summary>
 Được thực hiện ở quá trình tiền xử lí
     
 Ta có thể hiểu đơn giản: 
@@ -193,7 +193,7 @@ Vùng nhớ Stack được quản lý bởi hệ điều hành, dữ liệu đư
 </details>
 
 <details>
-<summary><h3>BUỔI 7: VARIABLE - BIẾN </h3></summary>
+<summary>BUỔI 7: VARIABLE - BIẾN</summary>
 
 # Static Variable - Extern Variable
 Là biến CHỈ ĐƯỢC KHỞI TẠO 1 LẦN DUY NHẤT khi gọi hàm lần đầu tiên (Nếu được khởi tại lại nó sẽ bỏ qua dòng lệnh đó) và nó sẽ tiếp tục tồn tại trong suốt vòng đời của chương trình.
