@@ -235,7 +235,7 @@ Ví dụ:
 
 
 <details>
-  <summary><h2> ☪️ programming language</h2></summary>
+  <summary><h2> ©️➕➕ programming language</h2></summary>
 <details> 
     
 <details>
