@@ -193,7 +193,7 @@ Vùng nhớ Stack được quản lý bởi hệ điều hành, dữ liệu đư
 </details>
 
 <details>
-<summary>BUỔI 7: VARIABLE - BIẾN </summary>
+<summary><h3>BUỔI 7: VARIABLE - BIẾN </h3></summary>
 
 # Static Variable - Extern Variable
 Là biến CHỈ ĐƯỢC KHỞI TẠO 1 LẦN DUY NHẤT khi gọi hàm lần đầu tiên (Nếu được khởi tại lại nó sẽ bỏ qua dòng lệnh đó) và nó sẽ tiếp tục tồn tại trong suốt vòng đời của chương trình.
