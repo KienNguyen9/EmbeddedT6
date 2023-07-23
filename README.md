@@ -4,7 +4,8 @@ Learn Embedded 6/2023
 <details>
   <summary><h2> ©️ C programming language</h2></summary>
 <details> 
-<summary>BUỔI 1: GIỚI THIỆU </summary>
+    
+<summary><h3>BUỔI 1: GIỚI THIỆU</h3> </summary>
 Một chương trình gồm có:
     
 - Thư viện
@@ -14,7 +15,7 @@ Một chương trình gồm có:
 </details>
     
 <details>
-<summary>BUỔI 2: MACRO & FUNCTION </summary>
+<summary><h3>BUỔI 2: MACRO & FUNCTION </h3></summary>
 Được thực hiện ở quá trình tiền xử lí
     
 Ta có thể hiểu đơn giản: 
