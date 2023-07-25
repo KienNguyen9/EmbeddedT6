@@ -387,7 +387,7 @@ int main(){
 </details>
 
 <details>
-  <summary><h3>Namespace</h3></summary>
+  <summary>Namespace</summary>
 
 - Namespace là từ khóa trong C++ được sử dụng để định nghĩa một phạm vi nhằm mục đích phân biệt các hàm, lớp, biến, ... cùng tên trong các thư viện khác nhau. 
 - Khi tạo `namespace` nếu muốn dùng chung tên biến của các `member` thì khi khai báo tên của `namespace` thì phải khai báo tên khác nhau
