@@ -2,7 +2,7 @@
 Learn Embedded 6/2023
 
 <details>
-  <summary><h2> ©️ - C programming language</h2></summary>
+  <summary><h2>C programming language</h2></summary>
 <details> 
     
 <summary>BUỔI 1: GIỚI THIỆU </summary>
@@ -241,7 +241,7 @@ Ví dụ:
 
 
 <details>
-  <summary><h2> 🇨 - C++ programming language</h2></summary>
+  <summary><h2>C++ programming language</h2></summary>
 <details> 
     
 <details>
