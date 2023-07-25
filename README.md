@@ -428,7 +428,7 @@ int main(){
 	
 </details>
 <details>
-  <summary><h3>Vector, List & Map</h3></summary>
+  <summary>Vector, List & Map</summary>
 
 ### Vector là gì?
 - Vector là một cấu trúc dữ liệu trong C++ dùng để chứa các đối tượng khác. Tương tự như mảng (array), vector cũng có thể chứa nhiều phần tử.
