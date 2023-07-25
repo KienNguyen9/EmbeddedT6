@@ -231,6 +231,7 @@ Trong lập trình nhúng rất thường hay gặp khai báo biến với từ 
 Ví dụ:
 
         volatile int x = readADC();
+  
 
 </details>
 </details>
@@ -245,10 +246,14 @@ Ví dụ:
 <details>
   <summary><h2>C++ programming language</h2></summary>
 <details> 
+
 <summary> Class </summary>
-    - Class là một kiểu dữ liệu do người dùng định nghĩa, chứa các dữ liệu và các hàm của riêng nó. Class là một thành phần chính của lập trình hướng đối tượng (OOP).
     
+# Class là gì?  
+    - Class là một kiểu dữ liệu do người dùng định nghĩa, chứa các dữ liệu và các hàm của riêng nó. Class là một thành phần chính của lập trình hướng đối tượng (OOP).    
     - Class định nghĩa các thuộc tính "data members" còn gọi là property và phương thức "member functions" còn gọi là method mà các đối tượng của nó có thể sử dụng.
+    - từ khóa class sẽ chỉ điểm bắt đầu của một class sẽ được cài đặt. Class trong C++ giúp tổ chức mã nguồn một cách có cấu trúc và tái sử dụng, đồng thời cho phép ẩn thông tin và triển khai tính kế thừa, đa hình và đóng gói.
+
 </details>
 
 </details>
