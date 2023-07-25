@@ -244,7 +244,7 @@ Ví dụ:
   <summary><h2>C++ programming language</h2></summary>
 <details> 
     
-<details>
+
 <summary> Class </summary>
     - Class là một kiểu dữ liệu do người dùng định nghĩa, chứa các dữ liệu và các hàm của riêng nó. Class là một thành phần chính của lập trình hướng đối tượng (OOP).
 
