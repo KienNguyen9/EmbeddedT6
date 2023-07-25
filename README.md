@@ -267,7 +267,7 @@ Access modifier là phạm vi truy cập của các thuộc tính và phương t
 Constructor hay hàm dựng là một hàm đặc biệt.
 Constructor là một hàm sẽ có tên trùng với tên của class.
 Sẽ được gọi chạy đầu tiên ngay khi chúng ta khởi tạo một object.
-''
+```
 class SinhVien{
 	public: 
 		SinhVien(int tuoi, int lop); //có tên trùng với tên của class gọi là contructor
@@ -291,7 +291,7 @@ int main(){
 	sv.hienThi();
 	return 0;
 }
-'' 
+``` 
 
 </details>
 
