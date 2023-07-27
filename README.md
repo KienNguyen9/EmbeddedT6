@@ -6,11 +6,6 @@ Learn Embedded 6/2023
 <details> 
     
 <summary>BUỔI 1: GIỚI THIỆU </summary>
-Một chương trình gồm có:
-    
-- Thư viện
-- Các câu lệnh 
-- Hàm & macro 
     
 </details>
     
