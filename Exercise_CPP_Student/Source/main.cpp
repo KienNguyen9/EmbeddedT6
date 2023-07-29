@@ -15,10 +15,6 @@ int main() {
 	sv.sortByAvg();
 	sv.sortByName();
 	sv.showList();
-	/*sv.updateInfoStudentByID();
-	sv.showList();
-	sv.delStudentByID();
-	sv.showList();
-	sv.searchStudentByName();*/
+	
     return 0;
 }
