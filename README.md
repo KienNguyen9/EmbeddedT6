@@ -519,16 +519,15 @@ Modifiers
 <details> 
 	<details>
   	<summary>1. UART protocal</summary>
-   
-	</details>
+   	</details>
+	
  	<details>
   	<summary>2. SPI protocal</summary>
-   
-	</details>
- 	<details>
+   	</details>
+ 
+  	<details>
   	<summary>3. I2C protocal</summary>
-   
-	</details>
+   	</details>
  
  	<details>
   	<summary>4. USB protocal</summary>
