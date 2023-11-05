@@ -1,17 +1,16 @@
     # EmbeddedT6
 Learn Embedded 6/2023
+
 <details>
-<summary>BUỔI 1: GIỚI THIỆU </summary>
-Một chương trình gồm có:
+  <summary><h2>C programming language</h2></summary>
+<details>  
     
-- Thư viện
-- Các câu lệnh 
-- Hàm & macro 
+<summary>BUỔI 1: GIỚI THIỆU </summary>
     
 </details>
     
 <details>
-<summary>BUỔI 2: MACRO & FUNCTION </summary>
+<summary>BUỔI 2: MACRO & FUNCTION</summary>
 Được thực hiện ở quá trình tiền xử lí
     
 Ta có thể hiểu đơn giản: 
@@ -28,12 +27,12 @@ Macro là một thủ tục tiền xử lý  | Function là một thủ tục th
 Không có tham số kiểu dữ liệu  | Có thể có các tham số kiểu dữ liệu khác nhau
 Vì biên dịch trước trong mã nguồn nên *Macro* tối ưu về tốc độ nhưng "có thể" làm tăng kích thước chương trình | Vì được lưu cố định trong 1 vùng nhớ nên *Function* tối ưu về kích thước chương trình nếu được gọi nhiều lần nhưng "có thể" không tối ưu tốc độ xử lý
 
-Ví dụ: Tính tổng 2 số
+Ví dụ: Tính tổng  2 số 
 Macro: 
 ```
 #define SUM(x, y) ((x) + (y))
 ```
-Function:
+Function: 
 ```
 int sum(int x, int y) {
     return x + y;
@@ -189,7 +188,7 @@ Vùng nhớ Stack được quản lý bởi hệ điều hành, dữ liệu đư
 </details>
 
 <details>
-<summary>BUỔI 7: VARIABLE - BIẾN </summary>
+<summary>BUỔI 7: VARIABLE - BIẾN</summary>
 
 # Static Variable - Extern Variable
 Là biến CHỈ ĐƯỢC KHỞI TẠO 1 LẦN DUY NHẤT khi gọi hàm lần đầu tiên (Nếu được khởi tại lại nó sẽ bỏ qua dòng lệnh đó) và nó sẽ tiếp tục tồn tại trong suốt vòng đời của chương trình.
@@ -227,6 +226,291 @@ Trong lập trình nhúng rất thường hay gặp khai báo biến với từ 
 Ví dụ:
 
         volatile int x = readADC();
+  
+
+</details>
+</details>
+
+
+
+
+
+
+
+    
+<details>
+  <summary><h2>C++ programming language</h2></summary>
+<details> 
+
+<summary> Class </summary>
+    
+# Class là gì?  
+- Class là một kiểu dữ liệu do người dùng định nghĩa, chứa các dữ liệu và các hàm của riêng nó. Class là một thành phần chính của lập trình hướng đối tượng (OOP).    
+- Class định nghĩa các thuộc tính "data members" còn gọi là property và phương thức "member functions" còn gọi là method mà các đối tượng của nó có thể sử dụng.
+-  từ khóa class sẽ chỉ điểm bắt đầu của một class sẽ được cài đặt. Class trong C++ giúp tổ chức mã nguồn một cách có cấu trúc và tái sử dụng, đồng thời cho phép ẩn thông tin và triển khai tính kế thừa, đa hình và đóng gói.
+# Phạm vi truy cập (Access modifiers):
+
+Access modifier là phạm vi truy cập của các thuộc tính và phương thức sẽ được khai báo bên dưới nó. Có 3 phạm vi truy cập trong C++ là public, private và protecte.
+
+- Public: Các member được khai báo trong Public thì các Object có thể truy cập trực tiếp tới được. Và các User có thể sử dụng và thay đổi các giá trị trong các member này.
+    
+- Private: Được sử dụng khi bạn muốn chặn User truy cập vào những member khai báo trong phạm vi này, giới hạn truy cập và sửa đổi giá trị của chúng. Sử dụng các member trong Public để truy cập đến các member trong Private.
+    
+- Protected: Tương tự như Private, nhưng Private thì các class con không thể kết thừa được các member trong Private của class chính, còn Protected thì lại cho phép các class con có thể kế thừa được các member trong protected của class chính.
+    
+# Constructor
+Constructor hay hàm dựng là một hàm đặc biệt.
+Constructor là một hàm sẽ có tên trùng với tên của class.
+Sẽ được gọi chạy đầu tiên ngay khi chúng ta khởi tạo một object.
+```
+class SinhVien{
+	public: 
+		SinhVien(int tuoi, int lop); //có tên trùng với tên của class gọi là contructor
+		void hienThi(); //method	
+	private: 
+		int tuoi; //property
+		int lop; //property
+};
+void SinhVien::hienThi(){
+	cout<<"Tuoi: "<<tuoi<<endl;  
+	cout<<"Lop "<<lop<<endl;
+}
+SinhVien::SinhVien(int tuoi,int lop){
+	SinhVien::tuoi = tuoi; //class SinhVien có thể truy cập đến tất cả nhưng member nằm trong nó
+	SinhVien::lop = lop;
+}
+int main(){
+	// khi có contructor thì nó luôn luôn chạy đầu tiên khi object được khởi tạo.
+	// contructor có thể có tham số đầu vào hoặc không có
+	SinhVien sv(17,6); //có thể gán giá trị trực tiếp vào khai báo ở public
+	sv.hienThi();
+	return 0;
+}
+``` 
+# Biến static trong class
+Khi định nghĩa static trong class thì phải khởi tạo lần đầu ở ngoài.
+Khi khởi tạo thì địa chỉ của nó tồn tại trong suốt chương trình nên member static này của các object sẽ đều có cùng 1 địa chỉ.
+```c++
+class SinhVien{
+	public:
+		string ten;
+		static int tuoi; //khi khai báo static trong class thì phải hởi tạo lần đầu ở ngoài
+};
+
+int SinhVien::tuoi; //ta có thể gán giá trị cho nó, khi khởi tạo thì địa chỉ của nó tồn tại trong suốt chương trình nên member static này của các object sẽ có cùng 1 địa chỉ.
+
+int main(){
+	
+	SinhVien sv1,sv2;
+	//về địa chỉ của hai object thì giống với struct. sv1 và sv2 sẽ được cấp vùng nhớ khác  với kích thước là tổng kích thước của các member và bộ nhớ đệm, địa chỉ của nó sẽ là địa chỉ của member đầu tiên, và các member sẽ mang đỉa chỉ khác nhau như trong struct.
+	return 0;
+}
+```
+# Các đặc tính của OOP
+- Có 4 đặc tính: Tính đa hình, tính kế thừa, tính trừu tượng, tính đóng gói.
+  
+	- ***Inheritance (Tính kế thừa ):*** Một **class** có thể kế thừa các thuộc tính của một **class** khác đã tồn tại trước đó. Trong C++, khi một **class** con được tạo ra bởi việc kế thừa thuộc tính của **class** cha thì ta gọi class con đó là **subclass** và class cha là **superclass**. Chỉ có **Public** và **Protected** mới được kế thừa còn **Private** thì không được kế thừa, muốn kế thừa được các **member** trong **Private** buộc phải đổi lại **Protected**.
+		```c++
+  		class DoiTuong{
+			public:
+				void setThongTin(string ten, int tuoi);
+				void hienThi();
+			protected:
+				int TUOI; //property
+				string TEN;
+		};
+		
+		void DoiTuong::hienThi(){
+			cout<<"Day la class DoiTuong"<<endl;
+			cout<<"Ten: "<<TEN<<endl;  
+			cout<<"Tuoi "<<TUOI<<endl;
+		}
+		
+		void DoiTuong::setThongTin(string ten,int tuoi){
+			TEN = ten;
+			TUOI = tuoi;
+		}
+  		class SinhVien : public DoiTuong{
+			public:
+				void setThongTin(string ten, int tuoi, int mssv);
+				void hienThi(); //method	
+			private:
+				int MSSV;
+		};
+		
+		void SinhVien::setThongTin(string ten, int tuoi, int mssv){
+			TEN = ten;
+			TUOI = tuoi;
+			MSSV = mssv;
+		}
+		
+		void SinhVien::hienThi(){
+			cout<<"Day la class DoiTuong"<<endl;
+			cout<<"Ten: "<<TEN<<endl;  
+			cout<<"Tuoi "<<TUOI<<endl;
+			cout<<"Mssv "<<MSSV<<endl;
+		}
+		
+		int main(){
+			SinhVien dt;
+			dt.setThongTin("Hoang", 17);
+			dt.hienThi();
+			
+			SinhVien sv;
+			sv.setThongTin("Toan", 15,100);
+			sv.hienThi();
+			
+			return 0;
+		}
+  		```
+	- ***Abstraction (Tính trừu tượng):*** Là một khả năng mà chương trình có thể bỏ qua sự phức tạp bằng cách tập trung vào cốt lõi của thông tin cần xử lý. Điều đó có nghĩa, bạn có thể xử lý một đối tượng bằng cách gọi tên một phương thức và thu về kết quả xử lý, mà không cần biết làm cách nào đối tượng đó được các thao tác trong class. (Là chỉ những thứ cần thiết mà người dùng cần sử dụng thì được nằm ở public còn tính toán phức tạp mà người dùng không quan tâm đến thì nằm ở private)
+		- Ví dụ: Người dùng nhập a,b,c và muốn biết phương trình có nghiệm hay vô nghiệm. thì những phần method nhập và xuất thì nằm ở public, còn method tính toán kiểm tra thì nằm ở private,những phần nằm ở private người dùng không được quyền can thiệp vào.
+  	- ***Polymorphism (Tính đa hình):*** Là một khả năng mà một phương thức trong class có thể đưa ra các kết quả hoàn toàn khác nhau, tùy thuộc vào dữ liệu được xử lý.
+  	  	- Ta có thể khai báo tên hàm các method giống nhau nhưng phải khác đầu vào, bởi vì khi tên trùng nhau thì nó dựa vào inputparameter để xác định đó hàm nào.
+  	  	- Ví dụ:
+  	  	```c++
+  	  	class th{
+			public:
+				void tong(int a, int b);
+				void tong(int a, double b);
+				void tong(int a, int b, int c);
+		};
+  		```
+	- ***Encapsulation (Tính đóng gói):*** Có ý nghĩa không cho phép người sử dụng các đối tượng thay đổi trạng thái nội tại của một đối tượng, mà chỉ có phương thức nội tại của đối tượng có thể thay đổi chính nó. Điều đó có nghĩa, dữ liệu và thông tin sẽ được đóng gói lại, giúp các tác động bên ngoài một đối tượng không thể làm thay đổi đối tượng đó, nên sẽ đảm bảo tính toàn vẹn của đối tượng, cũng như giúp giấu đi các dữ liệu thông tin cần được che giấu.
+   		- Ví dụ: những biến nhập vào như a,b,c và biến xuất ra kết quả x1,x2 thì không được khai báo ở public, phải nằm ở trong private, và những biến đó được nhập và xuất thông qua các method, để tránh người dùng sửa đổi code làm lỗi chương trình. ví dụ để các biến đó ở public, người dùng nhập a,b,c ở method nhập, sau đó người dùng còn có thể chỉnh sửa a,b,c,delta... lúc này chương trình dễ bị trả kết quả sai.
+
+</details>
+
+<details>
+  <summary>Namespace</summary>
+
+- Namespace là từ khóa trong C++ được sử dụng để định nghĩa một phạm vi nhằm mục đích phân biệt các hàm, lớp, biến, ... cùng tên trong các thư viện khác nhau. 
+- Khi tạo `namespace` nếu muốn dùng chung tên biến của các `member` thì khi khai báo tên của `namespace` thì phải khai báo tên khác nhau
+- Nếu dùng chung tên của namespace thì tên của các meber phải khác nhau (dù có chung file hay khác file), Do khai báo cùng tên namespace thì dùng chung bộ nhớ nên nếu tên các member cũng giống thì những member giống nhau sẽ cùng chung 1 địa thì sẽ dẫn đến xung đột vùng nhớ
+- ví dụ:
+	```C++
+	namespace A{
+		int a;
+		void function(){...}
+		struct c{...};
+	};
+	namespace B{
+		int a;
+		void function(){...}
+		struct c{...};
+	}
+	```
+ 
+</details>
+
+<details>
+  <summary>Template</summary>
+	
+- **Template (khuôn mẫu)** là một từ khóa trong C++, và là một kiểu dữ liệu trừu tượng tổng quát hóa cho các kiểu dữ liệu int, float, double, bool...
+- **Template** trong C++ có 2 loại đó là function template & class template.
+- **Template** giúp người lập trình định nghĩa tổng quát cho hàm và lớp thay vì phải nạp chồng (overloading) cho từng hàm hay phương thức với những kiểu dữ liệu khác nhau.
+- Ví dụ:
+	- Những hàm có form giống nhau chỉ khác kiểu dữ liệu.
+	```c++
+	int tong(int a, int b);
+	double tong(double a, double b);
+	template<typename var> //thay vì ta code hai hàm riêng để xử lý, thì ta có thể code dùng template chung lại để gọn code hơn.
+	int tong(var a, var b){
+		return (var)(a+b);
+	}
+	```
+	- Nếu a và b khác kiểu dữ liệu thì tên var của hai thằng phải khác nhau. Ví dụ var a, var1 b. Lúc này var đại diện cho kiểu dữ liệu a và var1 đại diện cho kiểu dữ liệu b.
+	
+</details>
+<details>
+  <summary>Vector, List & Map</summary>
+
+### Vector là gì?
+- Vector là một cấu trúc dữ liệu trong C++ dùng để chứa các đối tượng khác. Tương tự như mảng (array), vector cũng có thể chứa nhiều phần tử.
+- Các phần tử trong vector được lưu trữ một cách liên tiếp trong bộ nhớ. Điều này cho phép truy cập dễ dàng đến các phần tử bằng cách sử dụng chỉ số (index).
+- vector khác mảng thông thường là kích thước của vector có thể thay đổi trong quá trình thực thi chương trình. Khi cần, vector có thể mở rộng (tăng kích thước) hoặc thu hẹp (giảm kích thước) để chứa thêm hoặc loại bỏ các phần tử.
+- Sử dụng thư viện `#include<vector>`.
+- Modifiers:
+Modifiers
+	- ***push_back():*** Hàm đẩy một phần tử vào vị trí sau cùng của vector. Nếu kiểu của đối tượng được truyền dưới dạng tham số trong push_back() không giống với kiểu của vector thì sẽ bị ném ra. VD: ten-vector.push_back(ten-cua-phan-tu);
+	- ***assign():*** Nó gán một giá trị mới cho các phần tử vector bằng cách thay thế các giá trị cũ. VD: ten-vector.assign(int size, int value);
+	- ***pop_back():*** Hàm pop_back () được sử dụng để xóa đi phần tử cuối cùng một vector.
+	- ***insert():*** Hàm này chèn các phần tử mới vào trước phần tử trước vị trí được trỏ bởi vòng lặp. Chúng ta cũng có thể chuyển một số đối số thứ ba, đếm số lần phần tử được chèn vào trước vị trí được trỏ.
+   	- ***erase():*** Hàm được sử dụng để xóa các phần tử tùy theo vị trí vùng chứa
+	- ***emplace():*** Nó mở rộng vùng chứa bằng cách chèn phần tử mới vào
+	- ***emplace_back():*** Nó được sử dụng để chèn một phần tử mới vào vùng chứa vector, phần tử mới sẽ được thêm vào cuối vector
+	- ***swap():*** Hàm được sử dụng để hoán đổi nội dung của một vector này với một vector khác cùng kiểu. Kích thước có thể khác nhau.
+	- ***clear():*** Hàm được sử dụng để loại bỏ tất cả các phần tử của vùng chứa vector.
+- Ví dụ:
+	```c++
+	//dùng thư viện vector giống cấp phát bộ nhớ động trong c, nhưng có thư viện hỗ trợ các công cụ nhanh hơn.
+	#include <vector>
+	
+	vector<int> array;	// khai báo mảng kiểu int
+	array.push_back(4);  //thêm phần tử tại 0 là 4
+	array.push_back(8);  //thêm phần tử tại 1 là 8
+	array.push_back(20);
+	array.push_back(15); //thêm phần tử tại 4 là 15
+	
+	//từ C++ 11 trở đi có for cải :
+	for(int item : array){ // có thể dùng biến auto item, biến auto sẽ tự định nghĩa item thuộc kiểu dữ liệu gì tùy vào giá trị và nó được lưu
+		printf("i = %d\n",item);
+	}
+	
+	array.pop_back(); //xóa phần tử cuối cùng, xóa 15
+	array.insert(array.begin()+2,77); //chèn phần tử tại 2 là 77, các phần tử phía sau sẽ dời vị trí cho nhau.
+	array.erase(array.begin()+2); // xóa phần tử thứ 2, dời những phần tử phía sau lên.
+	array.clear(); //thu hồi vùng nhớ giống free
+	
+	for(int i =0;i<array;i++){
+		printf("%d\n",array[i]);
+	}
+	```
+
+### List là gì?
+- List là một cấu trúc dữ liệu danh sách liên kết kép (doubly linked list).
+- Các phần tử cửa nó không được lưu trong các địa liên tiếp mà lưu ở địa chỉ bất kì, và mỗi phần tử trước sẽ lưu kèm địa chỉ của phần tử kế tiếp theo tuần tự.
+- Vì cung cấp một danh sách các phần tử được liên kết với nhau bằng các con trỏ, cho phép thêm, xóa và truy cập các phần tử một cách linh hoạt.
+- Dùng thư viện `#include<list>`.
+- Ví dụ:
+	```c++
+	#include<list>
+	list<int> array;	// khai báo mảng kiểu int
+	array.push_back(4);  //thêm phần tử thứ 0 là 4
+	array.push_back(8);  //thêm phần tử thứ 1 là 8
+	array.push_back(20);
+	array.push_back(15); //thêm phần tử thứ 4 là 15
+	
+	for(auto item : array){ //
+		printf("i = %d\n",item);
+	}
+	```
+### Map là gì?
+- là một cấu trúc dữ liệu ánh xạ (associative container) trong thư viện chuẩn của ngôn ngữ. Nó được sử dụng để lưu trữ các cặp key-value, trong đó mỗi key là duy nhất và liên kết với một giá trị (value) tương ứng.
+- Dùng thư viện `#include<map>`.
+- Ví dụ:
+	```c++
+	#include <map>
+	int main(){
+		map<string, string> SinhVien;
+		SinhVien["Ten"] = "Hoang";
+		SinhVien["Tuoi"] = "7";
+		SinhVien["Lop"] = "15";
+		for(auto item : SinhVien){
+			cout<<"Key: "<<itemp.first<<", value: "<<item.second<<endl;
+		}
+		return 0;
+	}
+	```
+ ### Ưu điểm và nhược điểm của Vector, List và Map:
+
+ |            | Vector                   | List                        | Map                            |
+|------------|--------------------------|-----------------------------|--------------------------------|
+| Ưu điểm    | - Truy cập ngẫu nhiên các phần tử thông qua index. <br> - Được triển khai dưới dạng địa chỉ liên tiếp trong bộ nhớ. <br> - Hỗ trợ thay đổi kích thước dễ dàng. | - Chèn và xóa phần tử ở bất kỳ vị trí nào dễ dàng hơn. <br> - Không cần dùng thêm bộ nhớ liền kề để mở rộng kích thước. <br> - Linh hoạt trong việc chèn, xóa và truy xuất. | - Lưu trữ các cặp key-value và tự động sắp xếp theo key. <br> - Truy cập hiệu quả thông qua key. <br> - Hỗ trợ các phương thức cho việc chèn, xóa và truy xuất. |
+| Nhược điểm | - Chèn và xóa phần tử ở vị trí không phải cuối cùng thì phức tạp hơn. <br> - Cần dùng thêm bộ nhớ liền kề để mở rộng kích thước. <br> - Không hiệu quả cho chèn và xóa phần tử ở đầu hoặc giữa vector. | - Truy cập ngẫu nhiên chậm hơn so với vector. <br> - Chiếm nhiều bộ nhớ hơn do lưu trữ các con trỏ liên kết. | - Tốn nhiều bộ nhớ hơn do lưu trữ các key-value pairs và con trỏ liên kết. <br> - Thời gian tìm kiếm và truy xuất có phức tạp. <br> - Không hỗ trợ truy cập ngẫu nhiên theo index. |
+
+</details>
+
 
 </details>
 
