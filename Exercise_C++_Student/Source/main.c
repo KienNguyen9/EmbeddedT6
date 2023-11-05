@@ -1,12 +1,12 @@
 /*
-* File: student.cpp
+* File: main.cpp
 * Author: Nguyen Trung Kien
 * Date: 28/07/2023
 * Description: This is an example about create a program to manage students
 */
 
 #include "students.h"
-
+ 
 int main() {
 	menu sv;
 	sv.addStudent();
