@@ -514,5 +514,36 @@ Modifiers
 
 </details>
 
+<details>
+  <summary><h2>Communication Protocols in Embedded systems</h2></summary>
+<details> 
+	<details>
+  	<summary>1. UART protocal</summary>
+   
+	</details>
+ 	<details>
+  	<summary>2. SPI protocal</summary>
+   
+	</details>
+ 	<details>
+  	<summary>3. I2C protocal</summary>
+   
+	</details>
+ 
+ 	<details>
+  	<summary>4. USB protocal</summary>
+	USB refers to Universal Serial Bus and follows an Inter-System Protocol, which communicates between two devices. Prominent in the Computer electronic device world, USB has become popular over UART Protocols. USB follows an Asynchronous Serial Protocol 	where no clock signal is needed, making it a low-cost device. When the host device is sent communication, data transmission is relayed to a receiving endpoint device via data packets. USB can entail a range of speeds depending on the use case, from 	1.5MBS to 10GBS.
+	
+	- USB Pros
+	Low cost, low power and smaller in size
+	Can support high-capacity of data
+	Plug and play means easy implementation
+	- USB Cons
+	Limited capability
+	Limited messages can be communicated between the host and peripheral
+	</details>
+ 
+</details>
+
 
 
