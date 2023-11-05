@@ -240,8 +240,8 @@ Ví dụ:
     
 <details>
   <summary><h2>C++ programming language</h2></summary>
-<details> 
 
+<details> 
 <summary> Class </summary>
     
 # Class là gì?  
@@ -515,8 +515,8 @@ Modifiers
 </details>
 
 <details>
-  <summary><h2>Communication Protocols in Embedded systems</h2></summary>
-<details> 
+<summary><h2>Communication Protocols in Embedded systems</h2></summary>
+
 <details>
 <summary>1. UART protocal</summary>
 </details>
