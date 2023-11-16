@@ -3,16 +3,43 @@
 
 <details>
   <summary><h2>C programming language</h2></summary>
-<details>  
-    
-<summary>BUỔI 1: GIỚI THIỆU </summary>
-    
-</details>
     
 <details>
-<summary>BUỔI 2: MACRO & FUNCTION</summary>
+<summary>MACRO & FUNCTION</summary>
+<h3>MACRO là gì?</h3>
+Là một công cụ của bộ tiền xử lý (preprocessor) cho phép định nghĩa các đoạn mã (code) có thể được thay thế bằng văn bản khác tại thời điểm biên dịch. Macro có thể được sử dụng để:
+- Tạo các đoạn mã lập đi lập lại.
+- Thực hiện các phép toán đơn giản.
+- Điều khiển quá trình biên dịch.
+
+Macro có 2 loại chính: 
+1. Macro giống như đối tượng (object-like macro): Macro này giống như 1 hằng số. Có thể được sử dụng để thay thế cho một giá trị cụ thể.
+Ví dụ:
+
+```C
+#define PI 3.14159
+int main()
+{
+	printf("Gia tri cua Pi la: %f\n",PI);
+	return;
+}
+```
+2. 	Macro giống như hàm(function-like macro): Macro này giống như một hàm, có thể nhận tham số và trả về giá trị.
+
+```C
+#define max(x,y) ((x) > (y) ? (x) (y)); 
+int main()
+{
+	int a = 10;
+	int b = 20;
+	printf("Gia tri cua nay: %d\n", max(x,y));
+	return 0;
+}
+```
+Việc sử dụng macro có thể làm cho C/C++ trở nên gắn gọn
 Được thực hiện ở quá trình tiền xử lí
-    
+
+<h3>FUNCTION là gì?</h3>    
 Ta có thể hiểu đơn giản: 
 
 - MACRO là định nghĩa để dễ dàng gọi và sử dụng.
