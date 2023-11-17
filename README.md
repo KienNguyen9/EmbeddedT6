@@ -302,7 +302,9 @@ Hoặc khi khai báo con trỏ và đã sử dụng nó rồi, khi không muốn
 
 
 <details>
-<summary>Lesson 5: PHÂN VÙNG NHỚ</summary>
+	<summary>
+		<h3>Lesson 5: PHÂN VÙNG NHỚ</h3>
+	</summary>
 
 Đây là phân vùng nhớ của một chương trình C/C++ 
 
