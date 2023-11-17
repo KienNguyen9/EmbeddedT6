@@ -22,11 +22,14 @@ Lập trình nhúng là việc lập trình các hệ thống nhúng, là các h
 <h2>Dưới đây là các bước đầu để bắt đầu trở thành lập trình viên nhúng</h2>
 
 <details>
-  <summary><h2>1. C programming language</h2></summary>
+	<summary>
+  		<h2>1. C programming language</h2>
+	</summary>
     
-<summary>
-	<h3>MACRO & FUNCTION</h3>
-</summary>
+<details>
+	<summary>
+		<h3>Macro & Function </h3>
+	</summary>
 
 <h4>MACRO là gì?</h4>
 Là một công cụ của bộ tiền xử lý (preprocessor) cho phép định nghĩa các đoạn mã (code) có thể được thay thế bằng văn bản khác tại thời điểm biên dịch. Macro có thể được sử dụng để:
