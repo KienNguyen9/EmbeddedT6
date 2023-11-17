@@ -86,21 +86,48 @@ Việc sử dụng macro có thể làm cho C/C++ trở nên gắn gọn, các m
 - Giúp chia nhỏ các các chương trình lớn thành những chương trình nhỏ(function).
 - Và có thể tại sử dụng nhiều lần trong chương trình.
 
+
 <h4> Các điểm giống và khác của MACRO VÀ FUNCTION </h4>
-<h5>Giống nhau</h5> 
+
+Giống nhau:
 - Ở mục đích : viết mã ngắn gọn và dễ hiểu hơn
 - Cả 2 đều có thể tái sử dụng
 
-<h5>Khác nhau: </h5>
+Khác nhau:
 
-Macro  | Function
-------------- | -------------
-Macro là một thủ tục tiền xử lý  | Function là một thủ tục thực thi tại runtime
-Được định nghĩa bằng cách sử dụng tiền xử lý (#define)  | Được định nghĩa bằng cách sử dụng cú pháp function
-Được sử dụng để thay thế một đoạn mã nào đó trong mã nguồn bằng một giá trị cụ thể  | Được sử dụng để thực thi một tác vụ cụ thể và trả về một giá trị
-Được thực hiện trong quá trình biên dịch, trước khi chương trình được thực thi  | Được thực thi trong quá trình chạy chương trình
-Không có tham số kiểu dữ liệu  | Có thể có các tham số kiểu dữ liệu khác nhau
-Tốc độ nhanh hơn được chạy liên tục do | Chậm hơn do phải vào địa chỉ lưu hàm để đọc 
+Đặc điểm | Macro  | Function
+------------- | ------------- | -------------
+Cách định nghĩa | Macro được định nghĩa bằng chỉ thị tiền xử lý (preprocessor directives)  | Function được định nghĩa bằng cú pháp (function declaration)
+Cách sử dụng | Macro được sử dụng bằng các thay thế macro name bằng nội dung của macro | Function được sử dụng bằng cách gọi tên function với các tham số cần thiết
+Thời gian thực thi | Macro được thay thế bởi preprocessor trước khi chương trình được biên dịch | Function được gọi trong thời gian thục thi chương trình
+Kích thước mã |Macro có thể làm tăng kích thước mã thực thi do nội dung của macro được sao chép nhiều lần | Function chỉ được sao chép 1 lần trong bộ nhớ khi chương trình được biên dịch
+Tính linh hoạt | Macro có thể được sử dụng để thay thế bất kì đoạn mã nào | Function có thể được sử dụng để thực thi một tác vụ cụ thể 
+
+Ưu điểm của Macro:
+- Macro có thể được sử dụng để thay thế các đoạn mã dài và phức tạp bằng một đoạn mã ngắn và đễ hiểu hơn
+- Macro có thể được sử dụng để tạo ra các định nghĩa hằng và biến
+- Macro có thể được sử dụng để thức hiện các phép toàn đơn giản (giúp dễ đọc hiểu)
+
+Nhược điểm của macro:
+- Làm tăng kích thước chương trình
+- Có thể làm chậm thời gian chạy chương trình
+- Có thể làm khó khăn cho việc gỡ lỗi 
+
+Ưu điểm của function:
+- Có thể chia nhỏ chương trình thành các module nhỏ
+- Có thể được tái sử dụng mã 
+- Giúp dễ được chương trình hơn, dễ hiểu và dễ bảo trì
+Nhược điểm của function:
+- Có thể làm tăng độ phức tạp của chương trình
+- Có thề làm chậm thời gian chạy chương trình
+
+Vậy lực chọn như thế nào với macro và function:
+- Độ phức tạp của mã cần thay thế: Nếu mã này là ngắn và đơn giản thì dùng ```macro```
+- Tần suất sử dụng đoạn mã cần thay thế: Nếu được sử dụng đi, sử dụng lại nhiều lần thì dùng ```function```
+- Kích thước và tốc độ của chương trình: Nếu chương trình cần tối ưu về kích thước và tốc độ thì nên tránh dùng ```macro```
+
+Nhìn chung, function là một lựa chọn tốt hơn macro trong hầu hết các trường hợp. Tuy nhiên, macro có thể được sử dụng hiệu quả trong một số trường hợp cụ thể.
+
 
 Vì biên dịch trước trong mã nguồn nên *Macro* tối ưu về tốc độ nhưng "có thể" làm tăng kích thước chương trình | Vì được lưu cố định trong 1 vùng nhớ nên *Function* tối ưu về kích thước chương trình nếu được gọi nhiều lần nhưng "có thể" không tối ưu tốc độ xử lý
 
@@ -109,6 +136,7 @@ Macro:
 ```
 #define SUM(x, y) ((x) + (y))
 ```
+
 Function: 
 ```
 int sum(int x, int y) {
@@ -116,6 +144,7 @@ int sum(int x, int y) {
 }
 ```
 Cả hai cách trên đều có thể được sử dụng để tính tổng của hai số, tuy nhiên, sử dụng function sẽ cho phép bạn định nghĩa các loại tham số và kiểu dữ liệu khác nhau và trả về một giá trị kiểu dữ liệu cụ thể.
+
 </details>
 <details>
 <summary>BUỔI 3: STRUCT UNION  </summary> 
