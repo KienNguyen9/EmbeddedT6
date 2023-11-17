@@ -3,16 +3,21 @@
 </summary>
 
 ## Lập trình nhúng là gì?
+
 	Lập trình nhúng là việc lập trình các hệ thống nhúng, là các hệ
 	thống điện tử được thiết kế để thực hiện một nhiệm vụ cụ thể. Các hệ thống nhúng thường được sử dụng trong các thiết bị điện tử tiêu dùng, thiết bị công nghiệp, thiết bị tự động hóa, v.v.
 
 ## Kiến thức cơ bản về lập trình nhúng bao gồm hai phần chính:
+
 ### 1. Lập trình phần mền nhúng: là phần quan trong nhất.
+
 	- Kiến thức về ngôn ngữ lập trình cần phải nắm vững: C, C++, Java.
 	- Kiến thức về cấu trúc dữ liệu và giải thuật là nền tảng xây dựng ứng dụng nhúng hiệu quả
 	- Kiến thức về hệ điều hành: Hệ điều hành cung cấp môi trường để chạy các ứng dụng nhúng. 
 	- Kiến thức về thiết kế và triển khai ứng dụng nhúng (Thiết kế, triển khai, kiểm tra và bảo trì các ứng dụng).
+
 ### 2. Lập trình phần cứng nhúng.
+
 	- Kiến thức cơ bản về điện tử: các linh kiện & công dụng của chúng
 	- Kiến thức về mạch điện tử: Cách thiết kế tạo ra các mạch điện kết nối các linh kiện với nhau.
 	- Kiến thức về PCB: Thiết kế PCB theo sơ đồ nguyên lý và quá trình tạo ra mạch in PCB.
