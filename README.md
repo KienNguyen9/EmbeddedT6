@@ -2,28 +2,26 @@
 	<h1>Embedded Basic Knowledge<h1>
 </summary>
 
-## Lập trình nhúng là gì?
+<h2>Lập trình nhúng là gì?</h2>
+Lập trình nhúng là việc lập trình các hệ thống nhúng, là các hệ	thống điện tử được thiết kế để thực hiện một nhiệm vụ cụ thể. Các hệ thống nhúng thường được sử dụng trong các thiết bị điện tử tiêu dùng, thiết bị công nghiệp, thiết bị tự động hóa, v.v.
 
-	Lập trình nhúng là việc lập trình các hệ thống nhúng, là các hệ
-	thống điện tử được thiết kế để thực hiện một nhiệm vụ cụ thể. Các hệ thống nhúng thường được sử dụng trong các thiết bị điện tử tiêu dùng, thiết bị công nghiệp, thiết bị tự động hóa, v.v.
+<h2>Kiến thức cơ bản về lập trình nhúng bao gồm hai phần chính:</h2>
 
-## Kiến thức cơ bản về lập trình nhúng bao gồm hai phần chính:
-
-### 1. Lập trình phần mền nhúng: là phần quan trong nhất.
+<h3> 1. Lập trình phần mền nhúng: là phần quan trong nhất.</h3>
 
 	- Kiến thức về ngôn ngữ lập trình cần phải nắm vững: C, C++, Java.
 	- Kiến thức về cấu trúc dữ liệu và giải thuật là nền tảng xây dựng ứng dụng nhúng hiệu quả
 	- Kiến thức về hệ điều hành: Hệ điều hành cung cấp môi trường để chạy các ứng dụng nhúng. 
 	- Kiến thức về thiết kế và triển khai ứng dụng nhúng (Thiết kế, triển khai, kiểm tra và bảo trì các ứng dụng).
 
-### 2. Lập trình phần cứng nhúng.
+<h3> 2. Lập trình phần cứng nhúng.</h3>
 
 	- Kiến thức cơ bản về điện tử: các linh kiện & công dụng của chúng
 	- Kiến thức về mạch điện tử: Cách thiết kế tạo ra các mạch điện kết nối các linh kiện với nhau.
 	- Kiến thức về PCB: Thiết kế PCB theo sơ đồ nguyên lý và quá trình tạo ra mạch in PCB.
 	- Kiến thức về hardware debug: sử dụng các thiết bị đo để kiểm tra lỗi của mạch in. 
 
-## Dưới đây là các bước đầu để bắt đầu trở thành lập trình viên nhúng.
+<h2>Dưới đây là các bước đầu để bắt đầu trở thành lập trình viên nhúng</h2>
 
 <details>
   <summary><h2>1. C programming language</h2></summary>
