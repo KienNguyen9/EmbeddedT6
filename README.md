@@ -1,5 +1,5 @@
 <Summary>
-	<h1>Embedded Basic Knowledge<h1>
+	<h1>Embedded System - Basic Knowledge<h1>
 </summary>
 
 <h2>Lập trình nhúng là gì?</h2>
@@ -24,7 +24,6 @@ Lập trình nhúng là việc lập trình các hệ thống nhúng, là các h
 <details>
   <summary><h2>1. C programming language</h2></summary>
     
-<details>
 <summary>
 	<h3>MACRO & FUNCTION</h3>
 </summary>
