@@ -398,8 +398,10 @@ Vùng nhớ Stack được quản lý bởi hệ điều hành, dữ liệu đư
 		<h3>Lesson 6. Variable </h3> 
 	</summary>
 
-# Static Variable - Extern Variable
+<h4> Static Variable - Extern Variable </h4>
+
 Là biến CHỈ ĐƯỢC KHỞI TẠO 1 LẦN DUY NHẤT khi gọi hàm lần đầu tiên (Nếu được khởi tại lại nó sẽ bỏ qua dòng lệnh đó) và nó sẽ tiếp tục tồn tại trong suốt vòng đời của chương trình.
+
 Ví dụ: Biến static cục bộ
   
 ```C
