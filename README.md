@@ -202,7 +202,9 @@ int main()
 
 
 <details>
-<summary>BUỔI 3: STRUCT UNION  </summary> 
+	<summary>
+		<h3>Lesson 2. Struct - Union </h5>
+	</summary> 
 
 - Struct và Union là 2 cấu trúc dữ liệu do lập trình viên định nghĩa bao gồm các biến với kiểu dữ liệu khác nhau. <br/>
 - Việc định nghĩa, khai báo biến, truy cập đến các thành phần của struct và union là giống nhau. Tuy nhiên, giữa struct và union có một vài điểm khác nhau sau:
@@ -214,12 +216,14 @@ Tại cùng 1 thời điểm run-time, có thể truy cập vào tất cả các
 </details>
 
 <details>
-<summary>BUỔI 4: COMPILER - TRÌNH BIÊN DỊCH</summary>      
+	<summary>
+		<h3>Lesson 3. Compiler - Trình biên dịch</h3>
+	</summary>      
   
 Compiler hay còn gọi là trình biên dịch có thể được hiểu là công việc dịch chuỗi câu lệnh được viết từ một ngôn ngữ lập trình thành chương trình tương đương dưới dạng ngôn ngữ máy tính, thường là ngôn ngữ ở cấp thấp hơn, ngôn ngữ máy. Đơn giản dễ hiểu thì có thể tạm nói là nhờ Complier này mà file .c chúng ta viết mới được dịch thành file .hex .bin để nạp được xuống một MCU bất kỳ.
 Quá trình biên dịch.
 
-# 1. Pre-processing (Tiền xử lí)
+<h4>1. Pre-processing (Tiền xử lí)</h4>
 Bộ tiền xử lý C không phải là một phần của trình biên dịch, mà là một bước riêng biệt trong quá trình biên dịch. Nói một cách đơn giản, Bộ tiền xử lý C chỉ là một công cụ thay thế văn bản và nó hướng dẫn trình biên dịch thực hiện tiền xử lý cần thiết trước khi biên dịch thực tế. Các lệnh tiền xử lí bắt đầu bằng kí tự "#" 
 Ví dụ: 
 - " #define" :Thay thế các macro
@@ -238,10 +242,13 @@ Trong giai đoạn này mã máy của một chương trình dịch từ nhiều
 
 
 <details>
-<summary>BUỔI 5: POINTER - CON TRỎ</summary>      
+	<summary>
+		<h3>Lesson 4. Pointer</h3>
+	</summary>    
+
 POINTER: Là một biến đặc biệt, dùng để lưu địa chỉ của biến chứ không phải giá trị, được lưu trên ram. Kích thước của biến pointer phụ thuộc vào vi xử lý.
 
-# Normal pointer 
+<h4> Normal pointer </h4> 
 Là con trỏ dùng để lưu địa chỉ của biến đó, kiểu dữ liệu của con biến như thế nào thì kiểu con trỏ cũng vậy.
 
 Ví dụ:
@@ -251,7 +258,7 @@ int *ptr = &a = 0x01 // * ptr ở đây là biến con trỏ ptr, do quy tắc �
 printf("Dia chi: %p,ptr); // Dia chi 0x01.
 printf("Gia tri: %d, *ptr);// * ptr là giá trị của con trỏ ptr trỏ đến.
 
-# Void Pointer
+<h4> Void Pointer </h4> 
 Con trỏ void có thể trỏ đến các vùng nhớ có các kiểu dữ liệu khác nhau.
 Con trỏ void không xác định được kiểu dữ liệu của vùng nhớ mà nó trỏ tới, vì vậy không thể truy cập xuất trực tiếp nội dung thông qua toán tử derefernce () được. Mà con trỏ kiểu void cần phải được ép kiểu một cách rõ ràng sang con trỏ có kiểu dữ liệu khác trước khi sử dụng toán tử derefernce ().
 ```
@@ -295,8 +302,6 @@ Hoặc khi khai báo con trỏ và đã sử dụng nó rồi, khi không muốn
     int *ptr = NULL;
 ```
 </details>
-
-
 
 
 
@@ -382,7 +387,9 @@ Vùng nhớ Stack được quản lý bởi hệ điều hành, dữ liệu đư
 </details>
 
 <details>
-<summary>BUỔI 7: VARIABLE - BIẾN</summary>
+	<summary>
+		<h3>Lesson 6. Variable </h3> 
+	</summary>
 
 # Static Variable - Extern Variable
 Là biến CHỈ ĐƯỢC KHỞI TẠO 1 LẦN DUY NHẤT khi gọi hàm lần đầu tiên (Nếu được khởi tại lại nó sẽ bỏ qua dòng lệnh đó) và nó sẽ tiếp tục tồn tại trong suốt vòng đời của chương trình.
