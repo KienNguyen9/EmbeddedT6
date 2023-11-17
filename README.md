@@ -415,22 +415,24 @@ void Count()
 Ví dụ: biến toàn cục
 File test.c có hàm sau: 
 
-        ```C
-        void display(){
-          printf('TEST')
-        }
-        ```
+```C
+void display()
+{
+    printf('TEST')
+}
+```        
+
 File main.c như sau:
 
-        ```C 
-		extern display();
-        
-        int main()
-		{
-        	display();
-          	return 0;
-        }
-		```
+```C 
+extern display();
+     
+int main()
+{
+	display();
+    return 0;
+}
+```
       
         
 # Từ khóa volatile
