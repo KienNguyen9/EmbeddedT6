@@ -215,6 +215,10 @@ Size của struct ít nhất bằng tổng size của các thành phần của s
 Tại cùng 1 thời điểm run-time, có thể truy cập vào tất cả các thành phần của struct | Tại cùng 1 thời điểm run-time, chỉ có thể truy cập 1 thành phần của union
 </details>
 
+
+
+
+
 <details>
 	<summary>
 		<h3>Lesson 3. Compiler - Trình biên dịch</h3>
@@ -252,16 +256,19 @@ POINTER: Là một biến đặc biệt, dùng để lưu địa chỉ của bi�
 Là con trỏ dùng để lưu địa chỉ của biến đó, kiểu dữ liệu của con biến như thế nào thì kiểu con trỏ cũng vậy.
 
 Ví dụ:
-
+```c
 int a = 10 // giả sử có địa chỉ là 0x01
 int *ptr = &a = 0x01 // * ptr ở đây là biến con trỏ ptr, do quy tắc đặt tên biến pointer phải có dấu * ở trước.
 printf("Dia chi: %p,ptr); // Dia chi 0x01.
 printf("Gia tri: %d, *ptr);// * ptr là giá trị của con trỏ ptr trỏ đến.
+```
+
 
 <h4> Void Pointer </h4> 
 Con trỏ void có thể trỏ đến các vùng nhớ có các kiểu dữ liệu khác nhau.
 Con trỏ void không xác định được kiểu dữ liệu của vùng nhớ mà nó trỏ tới, vì vậy không thể truy cập xuất trực tiếp nội dung thông qua toán tử derefernce () được. Mà con trỏ kiểu void cần phải được ép kiểu một cách rõ ràng sang con trỏ có kiểu dữ liệu khác trước khi sử dụng toán tử derefernce ().
-```
+
+```C
 #include <stdio.h>
 
 void tong(int a,int b){
@@ -373,14 +380,14 @@ Vùng nhớ Stack được quản lý bởi hệ điều hành, dữ liệu đư
 - Việc tự động dọn vùng nhớ còn tùy thuộc vào trình biên dịch trung gian.
 - Vấn đề lỗi xảy ra đối với vùng nhớ: 
     - Stack: bởi vì bộ nhớ Stack cố định nên nếu chương trình bạn sử dụng quá nhiều bộ nhớ vượt quá khả năng lưu trữ của Stack chắc chắn sẽ xảy ra tình trạng tràn bộ nhớ Stack (Stack overflow), các trường hợp xảy ra như bạn khởi tạo quá nhiều biến cục bộ, hàm đệ quy vô hạn,... Ví dụ về tràn bộ nhớ Stack với hàm đệ quy vô hạn:
-        ```
+        ```C
         int foo(int x){
             printf("De quy khong gioi han\n");
             return foo(x);
         }
         ```
     - Heap: Nếu bạn liên tục cấp phát vùng nhớ mà không giải phóng thì sẽ bị lỗi tràn vùng nhớ Heap (Heap overflow). Nếu bạn khởi tạo một vùng nhớ quá lớn mà vùng nhớ Heap không thể lưu trữ một lần được sẽ bị lỗi khởi tạo vùng nhớ Heap thất bại. Ví dụ trường hợp khởi tạo vùng nhớ Heap quá lớn:
-        ```
+        ```C
         int *A = (int *)malloc(18446744073709551615);
         ```
 
@@ -395,30 +402,36 @@ Vùng nhớ Stack được quản lý bởi hệ điều hành, dữ liệu đư
 Là biến CHỈ ĐƯỢC KHỞI TẠO 1 LẦN DUY NHẤT khi gọi hàm lần đầu tiên (Nếu được khởi tại lại nó sẽ bỏ qua dòng lệnh đó) và nó sẽ tiếp tục tồn tại trong suốt vòng đời của chương trình.
 Ví dụ: Biến static cục bộ
   
-        
-        void Count()
-        {
-        static int temp = 0;
-        printf("Temp = %d",temp);
-        temp++
-        }
+```C
+void Count()
+{
+	static int temp = 0;
+    printf("Temp = %d",temp);
+    temp++
+}
+```        
+       
         
 Ví dụ: biến toàn cục
 File test.c có hàm sau: 
-        ```
+
+        ```C
         void display(){
           printf('TEST')
         }
         ```
 File main.c như sau:
 
+        ```C 
+		extern display();
         
-        extern display();
-        
-        int main(){
-          display();
-          return 0;
+        int main()
+		{
+        	display();
+          	return 0;
         }
+		```
+      
         
 # Từ khóa volatile
 Trong lập trình nhúng rất thường hay gặp khai báo biến với từ khóa volatile. Việc khai báo biến volatile là rất cần thiết để tránh những lỗi sai khó phát hiện do tính năng optimization của compiler.
@@ -433,14 +446,11 @@ Ví dụ:
 </details>
 
 
-
-
-
-
-
     
 <details>
-  <summary><h2>C++ programming language</h2></summary>
+	<summary>
+  		<h2>C++ programming language</h2>
+  	</summary>
 
 <details> 
 <summary> Class </summary>
