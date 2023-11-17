@@ -43,8 +43,10 @@ Tên của macro phải là IN HOA toàn bộ, đây là qui luật để hạn 
 
 
 ```C
-// Cú pháp: " #define  <Object_name>  <Object_value>"
-// Tạo ra hằng số (đối tượng) MAX = 3000
+
+/* Cú pháp: " #define  <Object_name>  <Object_value>"
+ Tạo ra hằng số (đối tượng) MAX = 3000
+*/
 #define MAX 3000 
 
 /*Macro tiền xử lý CREATE_FUNC: tạo ra định nghĩa hàm.
@@ -60,6 +62,7 @@ void Func_name()
 }
 
 ```
+
 
 Macro có 2 loại chính: 
 1. Macro giống như đối tượng (object-like macro): Macro này giống như 1 hằng số. Có thể được sử dụng để thay thế cho một giá trị cụ thể.
