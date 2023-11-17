@@ -2,10 +2,10 @@
 	<h1> 📚 Embedded System - Basic Knowledge<h1>
 </summary>
 
-<h2>Lập trình nhúng là gì?</h2>
+<h2> 🅰 Lập trình nhúng là gì?</h2>
 Lập trình nhúng là việc lập trình các hệ thống nhúng, là các hệ	thống điện tử được thiết kế để thực hiện một nhiệm vụ cụ thể. Các hệ thống nhúng thường được sử dụng trong các thiết bị điện tử tiêu dùng, thiết bị công nghiệp, thiết bị tự động hóa, v.v.
 
-<h2>Kiến thức cơ bản về lập trình nhúng bao gồm hai phần chính:</h2>
+<h2> 🅱 Kiến thức cơ bản về lập trình nhúng bao gồm hai phần chính:</h2>
 
 <h3> 1. Lập trình phần mền nhúng: là phần quan trong nhất.</h3>
 - Kiến thức về ngôn ngữ lập trình cần phải nắm vững: C, C++, Java.
@@ -453,7 +453,7 @@ Ví dụ:
     
 <details>
 	<summary>
-  		<h2>C++ programming language</h2>
+  		<h2>Chapter 2️⃣. C++ programming language</h2>
   	</summary>
 
 <details> 
@@ -728,7 +728,7 @@ Modifiers
 </details>
 
 <details>
-<summary><h2>Communication Protocols in Embedded systems</h2></summary>
+<summary><h2>Chapter 3️⃣. Communication Protocols in Embedded systems</h2></summary>
 
 <details>
 <summary>1. UART protocal</summary>
@@ -757,7 +757,7 @@ Limited messages can be communicated between the host and peripheral
 </details>
 
 <details>
-<summary><h2>Microcontroller programming</h2></summary>
+<summary><h2>Chapter 4️⃣. Microcontroller programming</h2></summary>
 
 <details>
 <summary>1. Interrupt</summary>
