@@ -19,7 +19,7 @@ Lập trình nhúng là việc lập trình các hệ thống nhúng, là các h
 - Kiến thức về PCB: Thiết kế PCB theo sơ đồ nguyên lý và quá trình tạo ra mạch in PCB.
 - Kiến thức về hardware debug: sử dụng các thiết bị đo để kiểm tra lỗi của mạch in. 
 
-<h2>Dưới đây là các bước đầu để bắt đầu trở thành lập trình viên nhúng</h2>
+<h2> ⚡ Dưới đây là các bước đầu để bắt đầu trở thành lập trình viên nhúng ⚡ </h2>
 
 <details>
 	<summary>
