@@ -28,14 +28,18 @@ Lập trình nhúng là việc lập trình các hệ thống nhúng, là các h
     
 <details>
 	<summary>
-		<h3>Macro & Function </h3>
+		<h3>Macro - Function - Inline function </h3>
 	</summary>
 
-<h4>MACRO là gì?</h4>
+<h4>Macro là:</h4>
 Là một công cụ của bộ tiền xử lý (preprocessor) cho phép định nghĩa các đoạn mã (code) có thể được thay thế bằng văn bản khác tại thời điểm biên dịch. Macro có thể được sử dụng để:
 - Tạo các đoạn mã lập đi lập lại.
 - Thực hiện các phép toán đơn giản.
 - Điều khiển quá trình biên dịch.
+
+Cú pháp định nghĩa macro: 
+<h4>Lưu ý:</h>
+Tên của macro phải là IN HOA toàn bộ, đây là qui luật để hàn chế "Macro đẻ ra bug".
 
 ```C
 // Cú pháp: " #define  <Object_name>  <Object_value>"
@@ -80,9 +84,9 @@ int main()
 ```
 Việc sử dụng macro có thể làm cho C/C++ trở nên gắn gọn, các macro được thực hiện ở quá trình tiền xử lí.
 
-<h4>FUNCTION là gì?</h4>    
+<h4>Function là: </h4>    
 
-- FUNCTION là Hàm dùng để làm một chức năng nào đó cụ thể.
+- Function là Hàm dùng để làm một chức năng nào đó cụ thể.
 - Giúp chia nhỏ các các chương trình lớn thành những chương trình nhỏ(function).
 - Và có thể tại sử dụng nhiều lần trong chương trình.
 
@@ -143,9 +147,57 @@ int sum(int x, int y) {
     return x + y;
 }
 ```
-Cả hai cách trên đều có thể được sử dụng để tính tổng của hai số, tuy nhiên, sử dụng function sẽ cho phép bạn định nghĩa các loại tham số và kiểu dữ liệu khác nhau và trả về một giá trị kiểu dữ liệu cụ thể.
+Cả hai cách trên đều có thể được sử dụng để tính tổng của hai số, tuy nhiên, sử dụng function sẽ cho phép bạn định nghĩa các loại tham số và ki
+
+<h4>Inline Function</h4>
+
+Inline function là một loại hàm thường gặp trong lập trình C++ và trong lập trình Embedded.
+Từ khóa ```inline``` được dùng để đề nghị (không phải là bắt buộc) trình biên dịch (compiler) thực hiện triển khai nội tuyến (inline expansion) với hàm đó, hay nói cách dễ hiểu là chèn code của hàm đó tại địa chỉ mà nó được gọi.
+
+Mục đích của ```inline function``` là để tăng hiệu suất của chương trình. Khi một hàm được khai triển nội tuyến, thì toàn bộ mã của hàm đó sẽ được chèn và vị trí mà hàm đó được gọi. Điều này sẽ loại bỏ thời gian cần thiết để gọi hàm, vì toàn bộ mã của hàm dẽ được sẵn sàng ở đó.
+
+```inline function``` thường được dùng cho các hàm đơn giản, kích thước nhỏ và được gọi thường xuyên. 
+
+Ví dụ: hàm sau đây là một inline function điển hình.
+```C
+inline int add(int a, int b){ 
+	return a+b;
+}
+```
+Hàm này rấy là đơn giản, và nó được gọi thường xuyên. Khai triển nội tuyến hàm này sẽ tăng hiệu suất chương trình.
+
+Tuy nhiên, ```inline function``` cũng có các nhược điểm. 
+- Có thể làm tăng kích thước chương trình, vì mã của hàm sẽ được chèn vào nhiều vị trí khác nhau.
+- Có thể làm giảm tích linh hoạt của chương trình, vì mã hàm không còn có thể được sử dụng lại trong ngữ cảnh khác.
+
+Mẹo để làm việc với inline function:
+- Chỉ dùng cho các hàm nhỏ, đơn giản và được gọi nhiều lần
+- Cẩn thận kiểm tra hiệu suất của chương trình trước và sau khi sử dụng inline function
+- cân nhắc sử dụng macro thay vì inline function nếu cần phải sử dụng lại mã của hàm trong ngữ cảnh khác.
+
+Ví dụ này viết bằng CPP, những cũng có thể hiểu được tính chất inline function
+
+```C++
+#include <iostream>
+using namespace std;
+inline int add(int a, int b){
+	return a+b;
+}
+int main()
+{
+	int x = 10;
+	int y = 20;
+	cout << "x + y = " << add(x,y)<< endl;
+	return 0;
+}
+```
 
 </details>
+
+
+
+
+
 <details>
 <summary>BUỔI 3: STRUCT UNION  </summary> 
 
