@@ -1,16 +1,55 @@
-    # EmbeddedT6
+<Summary>
+	<h1>Embedded Basic Knowledge<h1>
+</summary>
 
+## Lập trình nhúng là gì?
+	Lập trình nhúng là việc lập trình các hệ thống nhúng, là các hệ
+	thống điện tử được thiết kế để thực hiện một nhiệm vụ cụ thể. Các hệ thống nhúng thường được sử dụng trong các thiết bị điện tử tiêu dùng, thiết bị công nghiệp, thiết bị tự động hóa, v.v.
+
+## Kiến thức cơ bản về lập trình nhúng bao gồm hai phần chính:
+### 1. Lập trình phần mền nhúng: là phần quan trong nhất.
+	- Kiến thức về ngôn ngữ lập trình cần phải nắm vững: C, C++, Java.
+	- Kiến thức về cấu trúc dữ liệu và giải thuật là nền tảng xây dựng ứng dụng nhúng hiệu quả
+	- Kiến thức về hệ điều hành: Hệ điều hành cung cấp môi trường để chạy các ứng dụng nhúng. 
+	- Kiến thức về thiết kế và triển khai ứng dụng nhúng (Thiết kế, triển khai, kiểm tra và bảo trì các ứng dụng).
+### 2. Lập trình phần cứng nhúng.
+	- Kiến thức cơ bản về điện tử: các linh kiện & công dụng của chúng
+	- Kiến thức về mạch điện tử: Cách thiết kế tạo ra các mạch điện kết nối các linh kiện với nhau.
+	- Kiến thức về PCB: Thiết kế PCB theo sơ đồ nguyên lý và quá trình tạo ra mạch in PCB.
+	- Kiến thức về hardware debug: sử dụng các thiết bị đo để kiểm tra lỗi của mạch in. 
+
+## Dưới đây là các bước đầu để bắt đầu trở thành lập trình viên nhúng.
 
 <details>
-  <summary><h2>C programming language</h2></summary>
+  <summary><h2>1. C programming language</h2></summary>
     
 <details>
-<summary>MACRO & FUNCTION</summary>
-<h3>MACRO là gì?</h3>
+<summary>
+	<h3>MACRO & FUNCTION</h3>
+</summary>
+
+<h4>MACRO là gì?</h4>
 Là một công cụ của bộ tiền xử lý (preprocessor) cho phép định nghĩa các đoạn mã (code) có thể được thay thế bằng văn bản khác tại thời điểm biên dịch. Macro có thể được sử dụng để:
 - Tạo các đoạn mã lập đi lập lại.
 - Thực hiện các phép toán đơn giản.
 - Điều khiển quá trình biên dịch.
+
+```C
+// Cú pháp: " #define  <Object_name>  <Object_value>"
+// Tạo ra hằng số (đối tượng) MAX = 3000
+#define MAX 3000 
+
+/*Macro tiền xử lý CREATE_FUNC: tạo ra định nghĩa hàm.
+* Macro này có 2 đối số: Func_name và cmd (Func_name là tên hàm, cmd là lệnh được thực thi khi gọi hàm)
+* Macro CREATE_FUNC hoạt động bằng cách mở rộng định nghĩa macro thành 1 định nghĩa hàm
+* 
+*/
+#define CREATE_FUNC(Func_name, cmd)
+void Func_name()
+{
+	printf("print command\n");
+}
+```
 
 Macro có 2 loại chính: 
 1. Macro giống như đối tượng (object-like macro): Macro này giống như 1 hằng số. Có thể được sử dụng để thay thế cho một giá trị cụ thể.
@@ -36,14 +75,20 @@ int main()
 	return 0;
 }
 ```
-Việc sử dụng macro có thể làm cho C/C++ trở nên gắn gọn
-Được thực hiện ở quá trình tiền xử lí
+Việc sử dụng macro có thể làm cho C/C++ trở nên gắn gọn, các macro được thực hiện ở quá trình tiền xử lí.
 
-<h3>FUNCTION là gì?</h3>    
-Ta có thể hiểu đơn giản: 
+<h4>FUNCTION là gì?</h4>    
 
-- MACRO là định nghĩa để dễ dàng gọi và sử dụng.
-- FUNTION là Hàm dùng để làm một chức năng nào đó cụ thể.
+- FUNCTION là Hàm dùng để làm một chức năng nào đó cụ thể.
+- Giúp chia nhỏ các các chương trình lớn thành những chương trình nhỏ(function).
+- Và có thể tại sử dụng nhiều lần trong chương trình.
+
+<h4> Các điểm giống và khác của MACRO VÀ FUNCTION </h4>
+<h5>Giống nhau</h5> 
+- Ở mục đích : viết mã ngắn gọn và dễ hiểu hơn
+- Cả 2 đều có thể tái sử dụng
+
+<h5>Khác nhau: </h5>
 
 Macro  | Function
 ------------- | -------------
@@ -52,6 +97,8 @@ Macro là một thủ tục tiền xử lý  | Function là một thủ tục th
 Được sử dụng để thay thế một đoạn mã nào đó trong mã nguồn bằng một giá trị cụ thể  | Được sử dụng để thực thi một tác vụ cụ thể và trả về một giá trị
 Được thực hiện trong quá trình biên dịch, trước khi chương trình được thực thi  | Được thực thi trong quá trình chạy chương trình
 Không có tham số kiểu dữ liệu  | Có thể có các tham số kiểu dữ liệu khác nhau
+Tốc độ nhanh hơn được chạy liên tục do | Chậm hơn do phải vào địa chỉ lưu hàm để đọc 
+
 Vì biên dịch trước trong mã nguồn nên *Macro* tối ưu về tốc độ nhưng "có thể" làm tăng kích thước chương trình | Vì được lưu cố định trong 1 vùng nhớ nên *Function* tối ưu về kích thước chương trình nếu được gọi nhiều lần nhưng "có thể" không tối ưu tốc độ xử lý
 
 Ví dụ: Tính tổng  2 số 
