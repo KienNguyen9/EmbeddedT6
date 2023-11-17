@@ -45,7 +45,8 @@ Tên của macro phải là IN HOA toàn bộ, đây là qui luật để hạn 
 
 
 
-```C++
+```C 
+#include "stdio.h"
 // Cú pháp: #define  (Object_name)  (<)Object_value)
 // Tạo ra hằng số (đối tượng) MAX = 3000
 #define MAX 3000 
@@ -65,7 +66,8 @@ Macro có 2 loại chính:
 1. Macro giống như đối tượng (object-like macro): Macro này giống như 1 hằng số. Có thể được sử dụng để thay thế cho một giá trị cụ thể.
 Ví dụ:
 
-```C++
+```C
+#include "stdio.h"
 #define PI 3.14159
 int main()
 {
@@ -75,7 +77,8 @@ int main()
 ```
 2. 	Macro giống như hàm(function-like macro): Macro này giống như một hàm, có thể nhận tham số và trả về giá trị.
 
-```C++
+```C
+#include "stdio.h"
 #define max(x,y) ((x) > (y) ? (x) (y)); 
 int main()
 {
