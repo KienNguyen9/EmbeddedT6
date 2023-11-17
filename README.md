@@ -41,16 +41,18 @@ Cú pháp định nghĩa macro:
 <h4>Lưu ý:</h>
 Tên của macro phải là IN HOA toàn bộ, đây là qui luật để hạn chế "Macro đẻ ra bug" vì nếu đặt tên thường có phần tỉ lệ trùng với một biết này đó trong chương trình dẫn đến lỗi, do compiler không thể phát hiên ra lỗi này.
 
-Cú pháp: " #define  <Object_name>  <Object_value>"
-Tạo ra hằng số (đối tượng) MAX = 3000
 
-Macro tiền xử lý CREATE_FUNC: tạo ra định nghĩa hàm.
-Macro này có 2 đối số: Func_name và cmd (Func_name là tên hàm, cmd là lệnh được thực thi khi gọi hàm)
-Macro CREATE_FUNC hoạt động bằng cách mở rộng định nghĩa macro thành 1 định nghĩa hàm
+
+
 
 ```C
+// Cú pháp: #define  (Object_name)  (<)Object_value)
+// Tạo ra hằng số (đối tượng) MAX = 3000
 #define MAX 3000 
 
+// Macro tiền xử lý CREATE_FUNC: tạo ra định nghĩa hàm.
+// Macro này có 2 đối số: Func_name và cmd (Func_name là tên hàm, cmd là lệnh được thực thi khi gọi hàm)
+// Macro CREATE_FUNC hoạt động bằng cách mở rộng định nghĩa macro thành 1 định nghĩa hàm
 #define CREATE_FUNC(Func_name, cmd)
 void Func_name()
 {
