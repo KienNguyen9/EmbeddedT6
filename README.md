@@ -23,7 +23,7 @@ Lập trình nhúng là việc lập trình các hệ thống nhúng, là các h
 
 <details>
 	<summary>
-  		<h2>1. C programming language</h2>
+  		<h2>Chapter 1. C programming language</h2>
 	</summary>
     
 <details>
@@ -296,10 +296,18 @@ Hoặc khi khai báo con trỏ và đã sử dụng nó rồi, khi không muốn
 ```
 </details>
 
-<details>
-<summary>BUỔI 6: PHÂN VÙNG NHỚ</summary>
 
-![Phân vùng nhớ](https://raw.githubusercontent.com/nvtquyen/EmbeddedT6/main/Picture/phan%20vung%20nho.png)
+
+
+
+
+<details>
+<summary>Lesson 5: PHÂN VÙNG NHỚ</summary>
+
+Đây là phân vùng nhớ của một chương trình C/C++ 
+
+![](image.png)
+
  
 • Text : <br/>
 – Quyền truy cập chỉ Read và nó chưa lệnh để thực thi nên tránh sửa đổi instruction. <br/>
