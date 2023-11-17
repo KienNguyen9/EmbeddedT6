@@ -8,18 +8,16 @@ Lập trình nhúng là việc lập trình các hệ thống nhúng, là các h
 <h2>Kiến thức cơ bản về lập trình nhúng bao gồm hai phần chính:</h2>
 
 <h3> 1. Lập trình phần mền nhúng: là phần quan trong nhất.</h3>
-
-	- Kiến thức về ngôn ngữ lập trình cần phải nắm vững: C, C++, Java.
-	- Kiến thức về cấu trúc dữ liệu và giải thuật là nền tảng xây dựng ứng dụng nhúng hiệu quả
-	- Kiến thức về hệ điều hành: Hệ điều hành cung cấp môi trường để chạy các ứng dụng nhúng. 
-	- Kiến thức về thiết kế và triển khai ứng dụng nhúng (Thiết kế, triển khai, kiểm tra và bảo trì các ứng dụng).
+- Kiến thức về ngôn ngữ lập trình cần phải nắm vững: C, C++, Java.
+- Kiến thức về cấu trúc dữ liệu và giải thuật là nền tảng xây dựng ứng dụng nhúng hiệu quả
+- Kiến thức về hệ điều hành: Hệ điều hành cung cấp môi trường để chạy các ứng dụng nhúng. 
+- Kiến thức về thiết kế và triển khai ứng dụng nhúng (Thiết kế, triển khai, kiểm tra và bảo trì các ứng dụng).
 
 <h3> 2. Lập trình phần cứng nhúng.</h3>
-
-	- Kiến thức cơ bản về điện tử: các linh kiện & công dụng của chúng
-	- Kiến thức về mạch điện tử: Cách thiết kế tạo ra các mạch điện kết nối các linh kiện với nhau.
-	- Kiến thức về PCB: Thiết kế PCB theo sơ đồ nguyên lý và quá trình tạo ra mạch in PCB.
-	- Kiến thức về hardware debug: sử dụng các thiết bị đo để kiểm tra lỗi của mạch in. 
+- Kiến thức cơ bản về điện tử: các linh kiện & công dụng của chúng
+- Kiến thức về mạch điện tử: Cách thiết kế tạo ra các mạch điện kết nối các linh kiện với nhau.
+- Kiến thức về PCB: Thiết kế PCB theo sơ đồ nguyên lý và quá trình tạo ra mạch in PCB.
+- Kiến thức về hardware debug: sử dụng các thiết bị đo để kiểm tra lỗi của mạch in. 
 
 <h2>Dưới đây là các bước đầu để bắt đầu trở thành lập trình viên nhúng</h2>
 
