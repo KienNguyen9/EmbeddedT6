@@ -39,7 +39,7 @@ Là một công cụ của bộ tiền xử lý (preprocessor) cho phép định
 
 Cú pháp định nghĩa macro: 
 <h4>Lưu ý:</h>
-Tên của macro phải là IN HOA toàn bộ, đây là qui luật để hàn chế "Macro đẻ ra bug".
+Tên của macro phải là IN HOA toàn bộ, đây là qui luật để hạn chế "Macro đẻ ra bug" vì nếu đặt tên thường có phần tỉ lệ trùng với một biết này đó trong chương trình dẫn đến lỗi, do compiler không thể phát hiên ra lỗi này.
 
 ```C
 // Cú pháp: " #define  <Object_name>  <Object_value>"
