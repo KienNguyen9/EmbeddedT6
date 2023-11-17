@@ -306,28 +306,51 @@ Hoặc khi khai báo con trỏ và đã sử dụng nó rồi, khi không muốn
 
 Đây là phân vùng nhớ của một chương trình C/C++ 
 
-![](image.png)
+![Alt text](image-1.png)
 
- 
-• Text : <br/>
-– Quyền truy cập chỉ Read và nó chưa lệnh để thực thi nên tránh sửa đổi instruction. <br/>
-– Chứa khai báo hằng số trong chương trình (.rodata) <br/>
-• Data: <br/>
-– Quyền truy cập là read-write. <br/>
-– Chứa biến toàn cục or biến static với giá trị khởi tạo khác không. <br/>
-– Được giải phóng khi kết thúc chương trình. <br/>
-• Bss: <br/>
-– Quyền truy cập là read-write. <br/>
-– Chứa biến toàn cục or biến static với giá trị khởi tạo bằng không or không khởi tạo. <br/>
-– Được giải phóng khi kết thúc chương trình. <br/>
-• Stack: <br/>
-– Quyền truy cập là read-write. <br/>
-– Được sử dụng cấp phát cho biến local, input parameter của hàm,… <br/>
-– Sẽ được giải phóng khi ra khỏi block code/hàm <br/>
-• Heap: <br/>
-– Quyền truy cập là read-write. <br/>
-– Được sử dụng để cấp phát bộ nhớ động như: Malloc, Calloc, … <br/>
-– Sẽ được giải phóng khi gọi hàm free,… <br/>
+<h4>Text segment hay Code segment hoặc TEXT</h4>
+
+Các đặc điểm chính:
+- Contains executable instruction (Chứa các chỉ thị thực thi)
+- Shareable (có tính chia sẻ)
+- Read-Only
+
+Giải thích rõ như sau:
+- Là một trong những thành phần của chương trình trong file(tập tin) hoặc trong memory (bộ nhớ) chứa các chỉ thị thực thi. 
+- Vì là một vùng trong bộ nhớ, phân vùng văn bản có thể được đặt bên dưới HEAP hoặc STACK để ngăn việc HEAP và STACK tràn ra và ghi đè lên nó.
+Thông thường, Text segment có thể chia sẻ sao cho chỉ một bản sao duy nhất cần có trong bộ nhớ cho các chương trình được thực thi thường xuyên, chẳng hạn như trình soạn thảo văn bản, trình biên dịch C, shell, v.v. 
+- Ngoài ra, phân vùng văn bản thường là phân vùng chỉ đọc (read-only), để ngăn chương trình vô tình sửa đổi các chỉ thị của nó.
+
+<h4>Initialized Data segment (BS) </h4>
+Các đặc điểm chính:
+- Lưu trữ các biến: global variables, static variables
+- Với điều kiện đã khởi tạo (khác 0)
+– Quyền truy cập là read-write.   
+– Được giải phóng khi kết thúc chương trình. 
+
+<h4>Unintialized Data Segment (BSS) </h4>
+Các đặc điểm chính:
+– Quyền truy cập là read-write.  
+– Chứa biến toàn cục or biến static với giá trị khởi tạo bằng không or không khởi tạo.  
+– Được giải phóng khi kết thúc chương trình.  
+
+<h4>Heap - Dynamic Memory allocation</h4>
+Cấp phát bộ nhớ động
+- Kích thước có thể thay đổi (các địa chỉ mới sẽ tăng dần)
+– Quyền truy cập là read-write.  
+– Được sử dụng để cấp phát bộ nhớ động như: Malloc, Calloc, realloc, new 
+– Sẽ được giải phóng khi gọi hàm free, delete.
+
+Nếu không giải phóng vùng nhớ ở HEAP thì sẽ dẫn đế rò rỉ bộ nhớ LEAK MEMORY
+
+<h4>Stack Segment - Automatic variable storage </h4>
+- Kích thước có thể thay đổi (giá trị địa chỉ mới sẽ nhỏ dần).
+- LIFO structure
+- Function frame
+– Quyền truy cập là read-write. 
+– Được sử dụng cấp phát cho biến local, input parameter của hàm,…  
+– Sẽ được giải phóng khi ra khỏi block code/hàm 
+
 
 ***So sánh Stack và Heap**: 
 - Giống nhau: Bộ nhớ Heap và bộ nhớ Stack bản chất đều cùng là vùng nhớ được tạo ra và lưu trữ trong RAM khi chương trình được thực thi.
