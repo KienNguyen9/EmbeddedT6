@@ -28,7 +28,7 @@ Lập trình nhúng là việc lập trình các hệ thống nhúng, là các h
     
 <details>
 	<summary>
-		<h3>Macro - Function - Inline function </h3>
+		<h3>Lesson 1. Macro - Function - Inline function </h3>
 	</summary>
 
 <h4>Macro là:</h4>
@@ -38,7 +38,7 @@ Là một công cụ của bộ tiền xử lý (preprocessor) cho phép định
 - Điều khiển quá trình biên dịch.
 
 Cú pháp định nghĩa macro: 
-<h4>Lưu ý:</h>
+<h4>Lưu ý:</h4>
 Tên của macro phải là IN HOA toàn bộ, đây là qui luật để hạn chế "Macro đẻ ra bug" vì nếu đặt tên thường có phần tỉ lệ trùng với một biết này đó trong chương trình dẫn đến lỗi, do compiler không thể phát hiên ra lỗi này.
 
 
