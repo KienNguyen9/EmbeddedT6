@@ -206,6 +206,11 @@ int main()
 		<h3>Lesson 2. Struct - Union </h5>
 	</summary> 
 
+<h4>Struct là:</h4>
+Kiểu dữ liệu do người dùng tự định nghĩa
+
+<h4>Union là:</h4>
+
 - Struct và Union là 2 cấu trúc dữ liệu do lập trình viên định nghĩa bao gồm các biến với kiểu dữ liệu khác nhau. <br/>
 - Việc định nghĩa, khai báo biến, truy cập đến các thành phần của struct và union là giống nhau. Tuy nhiên, giữa struct và union có một vài điểm khác nhau sau:
 
@@ -213,6 +218,7 @@ Struct  | Union
 ------------- | -------------
 Size của struct ít nhất bằng tổng size của các thành phần của struct. Sử dụng từ “ít nhất” là vì size struct còn phụ thuộc vào alignment struct. sizeof(A) = 16 (vì sizeof của uint64_t, uint32_t, uint8_t lần lượt là 8, 4, 1 byte nên 1 + 4 là 5 byte nên phải chèn thêm 3 byte bộ nhớ đệm và cho ra lần quét tiếp là 8 byte) ``` struct { uint8_t var1; uint32_t var2; uint64_t var3; } ``` | Size của union bằng size của thành phần có size lớn nhất trong union. sizeof(A) = 8 (kích thước của thành phần lớn nhất trong union là uint64_t là 8 byte) ``` union { uint8_t var1; uint32_t var2; uint64_t var3; } ```
 Tại cùng 1 thời điểm run-time, có thể truy cập vào tất cả các thành phần của struct | Tại cùng 1 thời điểm run-time, chỉ có thể truy cập 1 thành phần của union
+
 </details>
 
 
@@ -734,10 +740,33 @@ Modifiers
 <summary>1. UART protocal</summary>
 </details>
 	
+
+
 <details>
-<summary>2. SPI protocal</summary>
+	<summary>2. SPI protocal</summary>
+Nội dung chính:
+Giao thức SPI(Serial Peripheral Interface) là một chuẩn truyền thông nối tiếp tốc độ cao do Motorola để xuất.
+- Các bit dữ liệu được truyền nối tiếp nhau và có xung clock đồng bộ.
+- Giao tiếp song công(duplex), có thể truyền và nhận cùng một thời điểm.
+- Khoảng cách truyền ngắn, được sử dụng để trao đổi dữ liệu giữa các chip trên cùng bo mạch.
+- Tốc độ truyền khoảng vài Mb/s.
+- Các vi điều khiển thường được tích hợp module giao tiếp SPI dùng để giao tiếp với các vi điều khiển khác và các ngoại vi như: Sensor, LCD, ADC, DAC, SD card, EEPROM,...
+
+<h4> Giao tiếp 1 master - 1 slave:</h4>
+SPI gồm 4 đường tín hiệu:
+- SCLK: Serial Clock
+- MOSI: Master out - Slave in
+- MISO: Master in  - Slave out
+- SS : Slave Select
+
+<h4>Cách truyền nhận dữ liệu</h4>
+
+![Alt text](image-2.png)
+
 </details>
  
+
+
 <details>
 <summary>3. I2C protocal</summary>
 </details>
