@@ -768,6 +768,7 @@ SPI gồm 4 đường tín hiệu:
 <h4>Cách truyền nhận dữ liệu</h4>
 
 Mạch nguyên lý cơ bản giữa master vá slave
+
 ![Alt text](image-2.png)
 
 <h4>Giải thích các chân</h4>
