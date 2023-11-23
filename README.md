@@ -745,7 +745,13 @@ Modifiers
 <details>
 	<summary>2. SPI protocal</summary>
 Nội dung chính:
-Giao thức SPI(Serial Peripheral Interface) là một chuẩn truyền thông nối tiếp tốc độ cao do Motorola để xuất.
+Giao thức SPI(Serial Peripheral Interface) là Giao tiếp ngoại vi NỐI TIẾP
+- Rất giống với UART, nó là chuẩn giao tiếp NỐI TIẾP
+- Gồm 4 ngõ vào/ra để liên lạc (Clock, MOSI, MISO, CS)
+- MOSI và MISO là 1 dây để giao tiếp chính (truyền và nhận thông tin) 
+- Chân CS(Chip Select) được dùng để chọn thiết bị mà bạn muốn truyền thông tin tới  
+
+
 - Các bit dữ liệu được truyền nối tiếp nhau và có xung clock đồng bộ.
 - Giao tiếp song công(duplex), có thể truyền và nhận cùng một thời điểm.
 - Khoảng cách truyền ngắn, được sử dụng để trao đổi dữ liệu giữa các chip trên cùng bo mạch.
@@ -757,11 +763,46 @@ SPI gồm 4 đường tín hiệu:
 - SCLK: Serial Clock
 - MOSI: Master out - Slave in
 - MISO: Master in  - Slave out
-- SS : Slave Select
+- CS : Chip Select
 
 <h4>Cách truyền nhận dữ liệu</h4>
 
+Mạch nguyên lý cơ bản giữa master vá slave
 ![Alt text](image-2.png)
+
+<h4>Giải thích các chân</h4>
+<h4>Chân SCLK: </h4>
+- Chân Serial Clock(SCLK) là chân dùng để đồng bộ hóa dữ liệu giữa 2 thiết bị 
+- Xung này do Mater tạo ra và truyền đến Slave
+- Mỗi xung nhịp trên chân SCLK báo 1 bit dữ liệu đi hoặc đến
+<h4>Chân MOSI:</h4>
+- Chân MOSI(Master out - Slave in) Tín hiệu tạo ra từ thiết bị Master và nhận ở thiết bị Slave
+<h4>Chân MISO:</h4>
+- Chân MISO(Master in - Slave out) Tín hiệu tạo ra từ thiết bị Slave và Master
+<h4>Chân CS(Chip Select)</h4>
+- Dùng để chọn thiết bị muốn giao tiếp
+- Để chọn Slave muốn giao tiếp thì Master sẽ kéo CS tương ứng xuống mức 0, Chân CS của vi điều khiển có thể là 1 chân GPIO bất kì được cài đặt ở chế độ OUTPUT.
+
+<h4>Quá trình truyền dữ liệu:</h4>
+- Mỗi chip Master hay Slave đều có thanh ghi dữ liệu 8 bits
+- Qúa trình truyền-nhận dữ liệu giữa Master-Slave xảy ra đồng thời sau 8 chu kì CLOCK, 1 BYTE dữ liệu được truyền theo cả 2 hướng.
+- Quá trình trao đổi dữ liệu bắt đầu khi Master tạo ra 1 xung CLOCK từ bộ tạo xung nhịp(Clock Generator) và kéo đường CS của Slave mà nó truyền dữ liệu xuống mức 0.
+- Cứ 1 xung CLOCK, Master sẽ gửi đi 1 bit từ thanh ghi dịch(Shift Register) của nó đến thanh ghi dịch của Slave thông qua đường MOSI.
+- Đồng thời, Slave cũng gửi lại 1 bit đến Master qua đường MISO.
+- Như vậy, sau 8 chu kì clock thì hoàn tất việc truyền nhận 1 byte dữ liệu.
+- Dữ liệu của 2 thanh ghi được trao đổi với nhau cùng lúc nên tốc độ nhanh và hiệu quả.
+
+<h4>Chế độ hoạt động</h4>
+
+SPI có 4 chế độ hoạt động, phụ thuộc vào ```Cực của xung gửi``` (Clock Polarity - CPOL) và ```Pha``` (Phase-CPHA)
+
+```CPOL``` dùng để chỉ trạng thái của chân CLK(SCLK) ở trạng thái nghỉ, Chân SCK giử ở mức cao khi ```CPOL = 1``` hoặc mức thấp khi ```CPOL = 0```
+```CPHA``` chỉ các mà dữ liệu được lấy(theo xung), Dữ liệu được lấy ở cạnh trên khi ```CPHA = 0```, lấy ở cạnh xuống khi ```CPHA = 1```
+
+![Alt text](image-3.png)
+
+<h4>Lưu ý:</h4> 
+Khi giao tiếp SPI giữa vi điều khiển và các thiết bị ngoại vi khác như IC, cảm biến thì 2 bên bắt buộc hoạt động cùng Mode, nếu không dữ liệu truyền nhận có thể bị đọc sai.
 
 </details>
  
