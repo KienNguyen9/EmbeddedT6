@@ -738,6 +738,23 @@ Modifiers
 
 <details>
 <summary>1. UART protocal</summary>
+<h3> Nội dung chính:</h3>
+
+- Giao thức UART(Universal Asynchronous Receiver/Transmitter) là một chuẩn giao tiếp ```Nối tiếp```, ```Không đồng bộ```
+- Cho phép truyền-nhận dữ liệu giữa 2 thiết bị (VD: Vi điều khiển, Máy tính, thiết bị ngoại vi,...).
+
+<h3>Nguyên lý hoạt động:</h3>
+
+UART truyền dữ liệu dưới dạng các bit, mỗi bit được biểu diễn bằng một xung điện. Mỗi gói dữ liệu UART bao gồm các thành phần sau:
+- ```Bit Start```: Là một bit có giá trị bằng ```0```, dùng để đánh dấu bắt đầu của một gói dữ liệu.
+- ```Data```: Là các bit chứa dữ liệu cần truyền, số lượng bit dữ liệu có thể thay đổi, tùy thuộc vào thiết bị.
+- ```Bit Stop```: Là một bit có giá trị bằng ```1```, được dùng để đánh dấu kết thúc của một gói dữ liệu
+
+<h3>Tốc độ truyền:</h3>
+
+Tốc độ truyền của UART được đo bằng đơn vị ```bit/s```, tức là số bit được truyền trong 1 giây. Tốc độ truyền của UART có thể thay đổi, tùy vào nhu cầu sử dụng. 
+Tốc độ truyền càng cao dữ liệu truyền càng nhanh,
+
 </details>
 	
 
