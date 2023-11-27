@@ -738,7 +738,7 @@ Modifiers
 
 <details>
 <summary>1. UART protocal</summary>
-<h3> Nội dung chính:</h3>
+<h3>Nội dung chính:</h3>
 
 - Giao thức UART(Universal Asynchronous Receiver/Transmitter) là một chuẩn giao tiếp ```Nối tiếp```, ```Không đồng bộ```
 - Cho phép truyền-nhận dữ liệu giữa 2 thiết bị (VD: Vi điều khiển, Máy tính, thiết bị ngoại vi,...).
