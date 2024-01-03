@@ -20,7 +20,7 @@ Lập trình nhúng là việc lập trình các hệ thống nhúng, là các h
 - Kiến thức về hardware debug: sử dụng các thiết bị đo để kiểm tra lỗi của mạch in. 
 
 <h2> ⚡ Dưới đây là các bước đầu để bắt đầu trở thành lập trình viên nhúng ⚡ </h2>
------------------------------------------
+
 <details>
 	<summary>
   		<h2>Chapter 1️⃣ . C programming language</h2>
@@ -32,22 +32,21 @@ Lập trình nhúng là việc lập trình các hệ thống nhúng, là các h
 	</summary>
 
 <h4>Macro là:</h4>
-Là một công cụ của bộ tiền xử lý (preprocessor) cho phép định nghĩa các đoạn mã (code) có thể được thay thế bằng văn bản khác tại thời điểm biên dịch. Macro có thể được sử dụng để:
+
+Là một chỉ thị tiền xử lý (preprocessor) hay một quy tắc định nghĩa cách chuyển `văn bản code đầu vào` nào đó thành `văn bản code đầu ra` theo ý muốn tại thời điểm biên dịch. 
+Macro được định nghĩa bằng lệnh `#define`. 
+
+Macro có thể được sử dụng để:
+
 - Tạo các đoạn mã lập đi lập lại.
 - Thực hiện các phép toán đơn giản.
 - Điều khiển quá trình biên dịch.
 
 Cú pháp định nghĩa macro: 
-<h4>Lưu ý:</h4>
-Tên của macro phải là IN HOA toàn bộ, đây là qui luật để hạn chế "Macro đẻ ra bug" vì nếu đặt tên thường có phần tỉ lệ trùng với một biết này đó trong chương trình dẫn đến lỗi, do compiler không thể phát hiên ra lỗi này.
-
-
-
-
 
 ```C 
-// Cú pháp: #define  (Object_name)  (<)Object_value)
-// Tạo ra hằng số (đối tượng) MAX = 3000
+// Cú pháp: #define  (Object_name)  (Object_value)
+// VD muốn tạo ra hằng số đối tượng MAX  giá trị là 3000
 #define MAX 3000 
 
 // Macro tiền xử lý CREATE_FUNC: tạo ra định nghĩa hàm.
@@ -60,8 +59,13 @@ void Func_name()
 }
 ```
 
+<h4>Lưu ý:</h4>
 
-Macro có 2 loại chính: 
+Tên của macro phải là IN HOA toàn bộ, đây là qui luật để hạn chế "Macro đẻ ra bug" vì nếu đặt tên thường có phần tỉ lệ trùng với một biết này đó trong chương trình dẫn đến lỗi, do compiler không thể phát hiên ra lỗi này.
+
+
+<h4>Macro có 2 loại chính:</h4> 
+
 1. Macro giống như đối tượng (object-like macro): Macro này giống như 1 hằng số. Có thể được sử dụng để thay thế cho một giá trị cụ thể.
 Ví dụ:
 
