@@ -20,7 +20,7 @@ Lập trình nhúng là việc lập trình các hệ thống nhúng, là các h
 - Kiến thức về hardware debug: sử dụng các thiết bị đo để kiểm tra lỗi của mạch in. 
 
 <h2> ⚡ Dưới đây là các bước đầu để bắt đầu trở thành lập trình viên nhúng ⚡ </h2>
--------------------------------------------------------------------------------------
+-----------------------------------------
 <details>
 	<summary>
   		<h2>Chapter 1️⃣ . C programming language</h2>
